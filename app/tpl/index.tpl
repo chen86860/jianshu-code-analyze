@@ -10,10 +10,10 @@
 
 <body>
     <div style="display: none">
-        <div id='zeroCount'>{{zeroCount}}</div>
-        <div id='oneToTen'>{{oneToTen}}</div>
-        <div id='elToTwo'>{{elToTwo}}</div>
-        <div id='beyondTwo'>{{beyondTwo}}</div>
+        <div id='zeroCount'>{{articleType.typeA}}</div>
+        <div id='oneToTen'>{{articleType.typeB}}</div>
+        <div id='elToTwo'>{{articleType.typeC}}</div>
+        <div id='beyondTwo'>{{articleType.typeD}}</div>
     </div>
     <div class="container">
         <h2>简书程序员专题热门文章900篇代码块统计</h2>
@@ -23,13 +23,18 @@
                 <tr>
                     <th>文章名</th>
                     <th>代码块数量</th>
+                    <th>阅读量</th>
                 </tr>
             </thead>
             <tbody>
-                {% for item in items %}
+                {% for item in articles %}
                     <tr>
-                        <td>{{ item.title }}</td>
-                        <td>{{ item.codes }}</td>
+                        <td>
+                        <a href={{item.url}}>
+                        {{ item.title }}</td>
+                        </a>
+                    <td>{{ item.codes }}</td>
+                    <td>{{ item.viewsCount }}</td>
                     </tr>
                 {% endfor %}
             </tbody>

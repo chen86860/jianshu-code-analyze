@@ -1,0 +1,2238 @@
+<!DOCTYPE html>
+<!--[if IE 6]><html class="ie lt-ie8"><![endif]-->
+<!--[if IE 7]><html class="ie lt-ie8"><![endif]-->
+<!--[if IE 8]><html class="ie ie8"><![endif]-->
+<!--[if IE 9]><html class="ie ie9"><![endif]-->
+<!--[if !IE]><!--> <html> <!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"1255494d3a","applicationID":"15702971","transactionName":"e1daR0JWVV9RER9UWlRUUVBEUFZdR0xDX1pP","queueTime":2,"applicationTime":274,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1026.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta property="wb:webmaster" content="294ec9de89e7fadb" />
+  <meta property="qc:admins" content="104102651453316562112116375" />
+  <meta property="qc:admins" content="11635613706305617" />
+  <meta property="qc:admins" content="1163561616621163056375" />
+  <meta name="google-site-verification" content="cV4-qkUJZR6gmFeajx_UyPe47GW9vY6cnCrYtCHYNh4" />
+  <meta name="google-site-verification" content="HF7lfF8YEGs1qtCE-kPml8Z469e2RHhGajy6JPVy5XI" />
+  <meta http-equiv="mobile-agent" content="format=html5; url=http://www.jianshu.com/c/NEt52a?order_by=added_at&amp;page=96">
+
+  <!-- Apple -->
+  <meta name="apple-mobile-web-app-title" content="简书">
+
+  
+
+    <title>程序员 - 专题 - 简书</title>
+
+  <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="7jem/FrZAaVuDZ294Tz0vj+Ne6RT77fnQcrllJ+rKQsxq8t4aZhnMGNS/O+fvAn/fk7xRGPIf8Y4NPcgrwsPRA==" />
+
+  <link rel="stylesheet" media="all" href="//cdn2.jianshu.io/assets/web-2d33bdf1265b1805a404.css" />
+  
+  <link rel="stylesheet" media="all" href="//cdn2.jianshu.io/assets/web/pages/collections/show/entry-2d33bdf1265b1805a404.css" />
+
+  <link href="//cdn2.jianshu.io/assets/favicons/favicon-783beb88ed621ceab614de960376ac0c.ico" rel="icon">
+      <link rel="apple-touch-icon-precomposed" href="//cdn2.jianshu.io/assets/apple-touch-icons/57-47624b2e2161e8eb144462c85db0a5ff.png" sizes="57x57" />
+      <link rel="apple-touch-icon-precomposed" href="//cdn2.jianshu.io/assets/apple-touch-icons/72-c00cde7cf98fc49e50cbb3ee1dcd5804.png" sizes="72x72" />
+      <link rel="apple-touch-icon-precomposed" href="//cdn2.jianshu.io/assets/apple-touch-icons/76-e8af0bdeaf1ba31e303b1fde8b5e66c4.png" sizes="76x76" />
+      <link rel="apple-touch-icon-precomposed" href="//cdn2.jianshu.io/assets/apple-touch-icons/114-f4c78569bbf1977e8382a5fd90c9237a.png" sizes="114x114" />
+      <link rel="apple-touch-icon-precomposed" href="//cdn2.jianshu.io/assets/apple-touch-icons/120-cf10c3711dba269522743729efe66bbc.png" sizes="120x120" />
+      <link rel="apple-touch-icon-precomposed" href="//cdn2.jianshu.io/assets/apple-touch-icons/152-7bd60457b5f3ecbf1343f0e6241be4f8.png" sizes="152x152" />
+</head>
+
+  <body lang="zh-CN" class="reader-black-font">
+    <!-- 全局顶部导航栏 -->
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="width-limit">
+    <!-- 左上方 Logo -->
+    <a class="logo" href="/"><img src="//cdn2.jianshu.io/assets/web/logo-58fd04f6f0de908401aa561cda6a0688.png" alt="Logo" /></a>
+
+    <!-- 右上角 -->
+      <!-- 未登录显示登录/注册/写文章 -->
+      <a class="btn write-btn" target="_blank" href="/writer#/">
+        <i class="iconfont ic-write"></i>写文章
+</a>      <a class="btn sign-up" href="/sign_up">注册</a>
+      <a class="btn log-in" href="/sign_in">登录</a>
+
+    <!-- 如果用户登录，显示下拉菜单 -->
+
+    <div id="view-mode-ctrl">
+    </div>
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu" aria-expanded="false">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="nav navbar-nav">
+            <li class="">
+              <a href="/">
+                <span class="menu-text">首页</span><i class="iconfont ic-navigation-discover menu-icon"></i>
+</a>            </li>
+            <li class="">
+              <a class="app-download-btn" href="/apps"><span class="menu-text">下载App</span><i class="iconfont ic-navigation-download menu-icon"></i></a>
+            </li>
+          <li class="search">
+            <form target="_blank" action="/search" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
+              <input type="text" name="q" id="q" value="" placeholder="搜索" class="search-input" />
+              <a class="search-btn" href="javascript:void(null)"><i class="iconfont ic-search"></i></a>
+              <!-- <div id="navbar-trending-search"></div> -->
+</form>          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+    
+
+<div class="container collection">
+  <div class="row">
+    <div class="col-xs-24 col-sm-16 main">
+      <!-- 专题头部模块 -->
+      <div class="main-top">
+        <a class="avatar-collection" href="/c/NEt52a">
+          <img src="//upload.jianshu.io/collections/images/16/computer_guy.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/240/h/240" alt="240" />
+</a>        <div class="follow-button" props-data-following="false" props-data-collection-id="16"></div>
+          <a class="btn btn-hollow" href="/sign_in">投稿</a>
+
+        <div class="title">
+          <a class="name" href="/c/NEt52a">程序员</a>
+        </div>
+        <div class="info">
+          收录了50552篇文章 · 391281人关注
+        </div>
+      </div>
+      <ul class="trigger-menu" data-pjax-container="#list-container"><li class=""><a href="/c/NEt52a?order_by=commented_at"><i class="iconfont ic-latestcomments"></i> 最新评论</a></li><li class="active"><a href="/c/NEt52a?order_by=added_at"><i class="iconfont ic-articles"></i> 最新收录</a></li><li class=""><a href="/c/NEt52a?order_by=top"><i class="iconfont ic-hot"></i> 热门</a></li></ul>
+      <div id="list-container">
+        <!-- 文章列表模块 -->
+<ul class="note-list" infinite-scroll-url="/c/NEt52a?order_by=added_at">
+  <li id="note-12414556" data-note-id="12414556" class="have-img">
+    <a class="wrap-img" href="/p/d92da1cc2822" target="_blank">
+      <img data-echo="//upload-images.jianshu.io/upload_images/1131767-4f0686d4779f58b1.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/375/h/300" class="img-blur" src="//upload-images.jianshu.io/upload_images/1131767-4f0686d4779f58b1.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/150/h/120" alt="120" />
+    </a>
+  <div class="content">
+    <div class="author">
+      <a class="avatar" target="_blank" href="/u/50355ce4a05b">
+        <img src="//upload.jianshu.io/users/upload_avatars/1131767/80f362250f3f?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96" alt="96" />
+</a>      <div class="name">
+        <a class="blue-link" target="_blank" href="/u/50355ce4a05b">mindwind</a>
+        <span class="time" data-shared-at="2017-05-14T22:53:53+08:00"></span>
+      </div>
+    </div>
+    <a class="title" target="_blank" href="/p/d92da1cc2822">聪明的老板才不招工资低的程序员</a>
+    <p class="abstract">
+      前阵子写了一篇《如果两个程序员差不多，选写作能力更好的那个》，就有读者留言说：“老板，不都是选工资更低的那个么？”。其实，这是另一个维度上的看法，正好最近也和一些经常招程序员...
+    </p>
+    <div class="meta">
+      <a target="_blank" href="/p/d92da1cc2822">
+        <i class="iconfont ic-list-read"></i> 876
+</a>        <a target="_blank" href="/p/d92da1cc2822#comments">
+          <i class="iconfont ic-list-comments"></i> 3
+</a>      <span><i class="iconfont ic-list-like"></i> 19</span>
+        <span><i class="iconfont ic-list-money"></i> 1</span>
+    </div>
+  </div>
+</li>
+<li id="note-12342794" data-note-id="12342794" class="have-img">
+    <a class="wrap-img" href="/p/0ec48da26c2e" target="_blank">
+      <img data-echo="//upload-images.jianshu.io/upload_images/1234624-e0fb2ad53ab7111e.png?imageMogr2/auto-orient/strip|imageView2/1/w/375/h/300" class="img-blur" src="//upload-images.jianshu.io/upload_images/1234624-e0fb2ad53ab7111e.png?imageMogr2/auto-orient/strip|imageView2/1/w/150/h/120" alt="120" />
+    </a>
+  <div class="content">
+    <div class="author">
+      <a class="avatar" target="_blank" href="/u/a57ecf3aaaf2">
+        <img src="//upload.jianshu.io/users/upload_avatars/1234624/e0e84f46a74a?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96" alt="96" />
+</a>      <div class="name">
+        <a class="blue-link" target="_blank" href="/u/a57ecf3aaaf2">Fynn_</a>
+        <span class="time" data-shared-at="2017-05-12T18:37:39+08:00"></span>
+      </div>
+    </div>
+    <a class="title" target="_blank" href="/p/0ec48da26c2e">1元秒 - 1元夺宝App完整实现</a>
+    <p class="abstract">
+      LICENSE Copyright 2015 - 2017 Fynn Licensed under the Apache License, Version 2.0 (the ...
+    </p>
+    <div class="meta">
+      <a target="_blank" href="/p/0ec48da26c2e">
+        <i class="iconfont ic-list-read"></i> 126
+</a>        <a target="_blank" href="/p/0ec48da26c2e#comments">
+          <i class="iconfont ic-list-comments"></i> 0
+</a>      <span><i class="iconfont ic-list-like"></i> 6</span>
+    </div>
+  </div>
+</li>
+<li id="note-12426826" data-note-id="12426826" class="">
+  <div class="content">
+    <div class="author">
+      <a class="avatar" target="_blank" href="/u/e9dccf239ea7">
+        <img src="//upload.jianshu.io/users/upload_avatars/271890/e754f9bc-345a-4efa-8fae-692ffd701584.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96" alt="96" />
+</a>      <div class="name">
+        <a class="blue-link" target="_blank" href="/u/e9dccf239ea7">liuzhijun</a>
+        <span class="time" data-shared-at="2017-05-15T11:15:23+08:00"></span>
+      </div>
+    </div>
+    <a class="title" target="_blank" href="/p/3502bdf5485e">一步一步教你认识Python闭包</a>
+    <p class="abstract">
+      我在博客中曾经介绍过两篇关于函数的文章，第一篇是 关于 Python 函数是第一类对象，第二篇是关于 Lambda 函数，今天来说说 Python 闭包。 什么是闭包？闭包有...
+    </p>
+    <div class="meta">
+      <a target="_blank" href="/p/3502bdf5485e">
+        <i class="iconfont ic-list-read"></i> 110
+</a>        <a target="_blank" href="/p/3502bdf5485e#comments">
+          <i class="iconfont ic-list-comments"></i> 0
+</a>      <span><i class="iconfont ic-list-like"></i> 4</span>
+    </div>
+  </div>
+</li>
+<li id="note-12427930" data-note-id="12427930" class="have-img">
+    <a class="wrap-img" href="/p/629297beb00f" target="_blank">
+      <img data-echo="//upload-images.jianshu.io/upload_images/1805009-a3af53f8ceaaa6d5.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/375/h/300" class="img-blur" src="//upload-images.jianshu.io/upload_images/1805009-a3af53f8ceaaa6d5.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/150/h/120" alt="120" />
+    </a>
+  <div class="content">
+    <div class="author">
+      <a class="avatar" target="_blank" href="/u/f37c04b4751d">
+        <img src="//upload.jianshu.io/users/upload_avatars/1805009/880deb12da35.jpeg?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96" alt="96" />
+</a>      <div class="name">
+        <a class="blue-link" target="_blank" href="/u/f37c04b4751d">侢見青春</a>
+        <span class="time" data-shared-at="2017-05-15T11:49:14+08:00"></span>
+      </div>
+    </div>
+    <a class="title" target="_blank" href="/p/629297beb00f">编程之美</a>
+    <p class="abstract">
+                  ps:小将的第一部小说上线，该小说旨在将编程知识写进一部小说中，将玄幻与编程结合，加油。
+    </p>
+    <div class="meta">
+      <a target="_blank" href="/p/629297beb00f">
+        <i class="iconfont ic-list-read"></i> 11
+</a>        <a target="_blank" href="/p/629297beb00f#comments">
+          <i class="iconfont ic-list-comments"></i> 0
+</a>      <span><i class="iconfont ic-list-like"></i> 0</span>
+    </div>
+  </div>
+</li>
+<li id="note-12288225" data-note-id="12288225" class="have-img">
+    <a class="wrap-img" href="/p/42a88dd21943" target="_blank">
+      <img data-echo="//upload-images.jianshu.io/upload_images/5993457-ca58430655c26bb7.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/375/h/300" class="img-blur" src="//upload-images.jianshu.io/upload_images/5993457-ca58430655c26bb7.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/150/h/120" alt="120" />
+    </a>
+  <div class="content">
+    <div class="author">
+      <a class="avatar" target="_blank" href="/u/b2a90c96d3fd">
+        <img src="//upload.jianshu.io/users/upload_avatars/5993457/077f1e42-73bb-4adb-a24e-a8accfa61b5b?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96" alt="96" />
+</a>      <div class="name">
+        <a class="blue-link" target="_blank" href="/u/b2a90c96d3fd">磨刀石Alex</a>
+        <span class="time" data-shared-at="2017-05-11T12:55:53+08:00"></span>
+      </div>
+    </div>
+    <a class="title" target="_blank" href="/p/42a88dd21943">比特币时代真的来临了，不学习，你真的OUT了</a>
+    <p class="abstract">
+      2016年的各种互联网资金盘浪潮，席卷了全国的每一寸土地，可能你参与了，赚了，逢人便得瑟；可能你参与了，赔了，说再也不参与加这种骗局了；或者你压根就不相信，更不会参加，所以你...
+    </p>
+    <div class="meta">
+      <a target="_blank" href="/p/42a88dd21943">
+        <i class="iconfont ic-list-read"></i> 427
+</a>        <a target="_blank" href="/p/42a88dd21943#comments">
+          <i class="iconfont ic-list-comments"></i> 7
+</a>      <span><i class="iconfont ic-list-like"></i> 0</span>
+    </div>
+  </div>
+</li>
+<li id="note-12412146" data-note-id="12412146" class="have-img">
+    <a class="wrap-img" href="/p/09adf35343f8" target="_blank">
+      <img data-echo="//upload-images.jianshu.io/upload_images/1121236-c02bb3d344c7b25c.png?imageMogr2/auto-orient/strip|imageView2/1/w/375/h/300" class="img-blur" src="//upload-images.jianshu.io/upload_images/1121236-c02bb3d344c7b25c.png?imageMogr2/auto-orient/strip|imageView2/1/w/150/h/120" alt="120" />
+    </a>
+  <div class="content">
+    <div class="author">
+      <a class="avatar" target="_blank" href="/u/bfd7bce94cc6">
+        <img src="//upload.jianshu.io/users/upload_avatars/1121236/b35c6724356f.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96" alt="96" />
+</a>      <div class="name">
+        <a class="blue-link" target="_blank" href="/u/bfd7bce94cc6">托爸</a>
+        <span class="time" data-shared-at="2017-05-14T22:00:14+08:00"></span>
+      </div>
+    </div>
+    <a class="title" target="_blank" href="/p/09adf35343f8">在变化面前，聊聊「计划」的意义</a>
+    <p class="abstract">
+      记得第一次做项目经理，中途接手一个银行项目，开始内心是拒绝的，因为这事：人多，团队最高峰30多号人；事杂，需要和行内十几个系统进行对接； 除此之外，少不了做项目永远的痛：工期...
+    </p>
+    <div class="meta">
+      <a target="_blank" href="/p/09adf35343f8">
+        <i class="iconfont ic-list-read"></i> 88
+</a>        <a target="_blank" href="/p/09adf35343f8#comments">
+          <i class="iconfont ic-list-comments"></i> 4
+</a>      <span><i class="iconfont ic-list-like"></i> 2</span>
+    </div>
+  </div>
+</li>
+<li id="note-12412420" data-note-id="12412420" class="">
+  <div class="content">
+    <div class="author">
+      <a class="avatar" target="_blank" href="/u/9e39ec4000e9">
+        <img src="//upload.jianshu.io/users/upload_avatars/1388874/87e83772-289f-49d7-ad96-8be071d312ae.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96" alt="96" />
+</a>      <div class="name">
+        <a class="blue-link" target="_blank" href="/u/9e39ec4000e9">土豆不要钱</a>
+        <span class="time" data-shared-at="2017-05-15T12:09:04+08:00"></span>
+      </div>
+    </div>
+    <a class="title" target="_blank" href="/p/de51c2339a4b">iOS 自定义UICollectionViewLayout布局多section界面</a>
+    <p class="abstract">
+      -- 在网上看了好多layout，发现多section的布局很少，这篇文章主要实现以下界面，采用collectionView实现-- collectionViewLayout...
+    </p>
+    <div class="meta">
+      <a target="_blank" href="/p/de51c2339a4b">
+        <i class="iconfont ic-list-read"></i> 275
+</a>        <a target="_blank" href="/p/de51c2339a4b#comments">
+          <i class="iconfont ic-list-comments"></i> 2
+</a>      <span><i class="iconfont ic-list-like"></i> 2</span>
+    </div>
+  </div>
+</li>
+<li id="note-12436843" data-note-id="12436843" class="">
+  <div class="content">
+    <div class="author">
+      <a class="avatar" target="_blank" href="/u/e22ef6eaf952">
+        <img src="//upload.jianshu.io/users/upload_avatars/5781463/e4fab681-f445-4198-a301-4c3a8a51d5bb.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96" alt="96" />
+</a>      <div class="name">
+        <a class="blue-link" target="_blank" href="/u/e22ef6eaf952">固安李庆海</a>
+        <span class="time" data-shared-at="2017-05-15T16:37:50+08:00"></span>
+      </div>
+    </div>
+    <a class="title" target="_blank" href="/p/1ec6b82a5817">Scala的控制结构</a>
+    <p class="abstract">
+      Scala提供了诸如if、while、for、try、match和函数调用等内建控制结构。 if while for 枚举集合类 过滤 可以在遍历的过程中加入判断达到过滤的目...
+    </p>
+    <div class="meta">
+      <a target="_blank" href="/p/1ec6b82a5817">
+        <i class="iconfont ic-list-read"></i> 19
+</a>        <a target="_blank" href="/p/1ec6b82a5817#comments">
+          <i class="iconfont ic-list-comments"></i> 0
+</a>      <span><i class="iconfont ic-list-like"></i> 0</span>
+    </div>
+  </div>
+</li>
+<li id="note-12033375" data-note-id="12033375" class="">
+  <div class="content">
+    <div class="author">
+      <a class="avatar" target="_blank" href="/u/753b522bde93">
+        <img src="//upload.jianshu.io/users/upload_avatars/4822707/a9898786-ba8f-45e7-8fc0-dce5437c7710.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96" alt="96" />
+</a>      <div class="name">
+        <a class="blue-link" target="_blank" href="/u/753b522bde93">黒猫</a>
+        <span class="time" data-shared-at="2017-05-15T17:57:42+08:00"></span>
+      </div>
+    </div>
+    <a class="title" target="_blank" href="/p/cd9fc0233369">（一）Java中网络相关API的应用</a>
+    <p class="abstract">
+      1、网络基础知识 在介绍后续Java Socket的相关知识之前，需要各位对于网络的基础知识有一定了解，关于此部分内容可以到已整理完成的网络基础知识专题查看。这里再补充以下内...
+    </p>
+    <div class="meta">
+      <a target="_blank" href="/p/cd9fc0233369">
+        <i class="iconfont ic-list-read"></i> 44
+</a>        <a target="_blank" href="/p/cd9fc0233369#comments">
+          <i class="iconfont ic-list-comments"></i> 0
+</a>      <span><i class="iconfont ic-list-like"></i> 5</span>
+    </div>
+  </div>
+</li>
+<li id="note-12433749" data-note-id="12433749" class="">
+  <div class="content">
+    <div class="author">
+      <a class="avatar" target="_blank" href="/u/4cee79b3a8ee">
+        <img src="//upload.jianshu.io/users/upload_avatars/1334311/3069ddac3303.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96" alt="96" />
+</a>      <div class="name">
+        <a class="blue-link" target="_blank" href="/u/4cee79b3a8ee">_既白_</a>
+        <span class="time" data-shared-at="2017-05-15T16:47:42+08:00"></span>
+      </div>
+    </div>
+    <a class="title" target="_blank" href="/p/5aa1ff3acf50">APP性能优化汇总</a>
+    <p class="abstract">
+      简介 随着IPhone手机市场的快速发展，苹果对 IOS APP的审核和要求也更加的苛刻。所以APP的性能是决定能否上架，能否给用户更好的用户体验的关键因素之一。性能优化主要...
+    </p>
+    <div class="meta">
+      <a target="_blank" href="/p/5aa1ff3acf50">
+        <i class="iconfont ic-list-read"></i> 53
+</a>        <a target="_blank" href="/p/5aa1ff3acf50#comments">
+          <i class="iconfont ic-list-comments"></i> 0
+</a>      <span><i class="iconfont ic-list-like"></i> 5</span>
+    </div>
+  </div>
+</li>
+
+</ul>
+
+      </div>
+    </div>
+    <div class="col-xs-24 col-sm-7 col-sm-offset-1 aside">
+        <p class="title">专题公告</p>
+        <div class="description js-description">
+          <p>如果你是程序员，或者有一颗喜欢写程序的心，喜欢分享技术干货、项目经验、程序员日常囧事等等，欢迎投稿《程序员》专题。</p>
+
+<p>专题主编：小彤花园 <a href="http://www.jianshu.com/users/4a4eb4feee62/">http://www.jianshu.com/users/4a4eb4feee62/</a>
+<br />编委：Kulbear</p>
+
+<p>【程序员】专题拒稿指北：<a href="http://www.jianshu.com/p/7c8b33b5f63b">http://www.jianshu.com/p/7c8b33b5f63b</a></p>
+
+<p>投稿须知：
+<br />1.收录相关技术文章，但不限于技术，也可以是项目经验类的文章和程序员日常。
+<br />2.文章內不得有任何推广信息。包括但不...</p>
+          <a data-action="toggle-description" class="open" href="javascript:void(null);">展开描述 <i class="iconfont ic-show"></i></a>
+        </div>
+      <div class="share">
+        <span>分享至</span>
+        <a href="javascript:void((function(s,d,e,r,l,p,t,z,c){var%20f=&#39;http://v.t.sina.com.cn/share/share.php?appkey=1881139527&#39;,u=z||d.location,p=[&#39;&amp;url=&#39;,e(u),&#39;&amp;title=&#39;,e(t||d.title),&#39;&amp;source=&#39;,e(r),&#39;&amp;sourceUrl=&#39;,e(l),&#39;&amp;content=&#39;,c||&#39;gb2312&#39;,&#39;&amp;pic=&#39;,e(p||&#39;&#39;)].join(&#39;&#39;);function%20a(){if(!window.open([f,p].join(&#39;&#39;),&#39;mb&#39;,[&#39;toolbar=0,status=0,resizable=1,width=440,height=430,left=&#39;,(s.width-440)/2,&#39;,top=&#39;,(s.height-430)/2].join(&#39;&#39;)))u.href=[f,p].join(&#39;&#39;);};if(/Firefox/.test(navigator.userAgent))setTimeout(a,0);else%20a();})(screen,document,encodeURIComponent,&#39;&#39;,&#39;&#39;,&#39;http://upload.jianshu.io/collections/images/16/computer_guy.jpg&#39;, &#39;推荐专题《程序员》（ 分享自 @简书 ）&#39;,&#39;http://www.jianshu.com/c/NEt52a?utm_campaign=maleskine&amp;utm_content=collection&amp;utm_medium=reader_share&amp;utm_source=weibo&#39;,&#39;页面编码gb2312|utf-8默认gb2312&#39;));"><i class="iconfont ic-share-weibo"></i></a>
+        <a data-action="weixin-share"><i class="iconfont ic-share-wechat"></i></a>
+        <a class="" href=""><i class="iconfont ic-share-more"></i></a>
+      </div>
+      <div class="editors-and-subscribers-container"></div>
+    </div>
+  </div>
+</div>
+<div data-vcomp="side-tool"></div>
+
+<script type="application/json" data-name="collection">
+  {"id":16,"slug":"NEt52a","owner":{"id":259},"content":"<p>如果你是程序员，或者有一颗喜欢写程序的心，喜欢分享技术干货、项目经验、程序员日常囧事等等，欢迎投稿《程序员》专题。</p>\n\n<p>专题主编：小彤花园 <a href=\"http://www.jianshu.com/users/4a4eb4feee62/\" class=\"blue-link\">http://www.jianshu.com/users/4a4eb4feee62/</a>\n<br />编委：Kulbear</p>\n\n<p>【程序员】专题拒稿指北：<a href=\"http://www.jianshu.com/p/7c8b33b5f63b\" class=\"blue-link\">http://www.jianshu.com/p/7c8b33b5f63b</a></p>\n\n<p>投稿须知：\n<br />1.收录相关技术文章，但不限于技术，也可以是项目经验类的文章和程序员日常。\n<br />2.文章內不得有任何推广信息。包括但不限于公众号、微博、微信，更不得在通过投稿后再修改文章加入推广信息。你可以将这些推广以及个人信息放在个人主页介绍里。\n<br />3.字数极少，段落混乱，大段代码没有放到代码框的文章不收录\n<br />4.不相关的内容不收录，请确认文章内容和本专题相关</p>\n\n<p>目前简书针对优质作者及爱好者，开设了官方程序员微信群，希望加入请发简信给主编小彤花园索取个人微信，主编会将你加入到【简书-程序员】微信群，分享内容，收获知识。添加微信时备注[简书ID]。</p>\n\n<p>微信添加简书大妈（jianshu_dama），进入简书丰富多彩的专题社群！</p>","short_content":"<p>如果你是程序员，或者有一颗喜欢写程序的心，喜欢分享技术干货、项目经验、程序员日常囧事等等，欢迎投稿《程序员》专题。</p>\n\n<p>专题主编：小彤花园 <a href=\"http://www.jianshu.com/users/4a4eb4feee62/\" class=\"blue-link\">http://www.jianshu.com/users/4a4eb4feee62/</a>\n<br />编委：Kulbear</p>\n\n<p>【程序员】专题拒稿指北：<a href=\"http://www.jianshu.com/p/7c8b33b5f63b\" class=\"blue-link\">http://www.jianshu.com/p/7c8b33b5f63b</a></p>\n\n<p>投稿须知：\n<br />1.收录相关技术文章，但不限于技术，也可以是项目经验类的文章和程序员日常。\n<br />2.文章內不得有任何推广信息。包括但不...</p>","subscribers_count":391281}
+</script>
+
+<script type='application/json' data-name='uuid'>
+  {"uuid":"3eb01052-0657-4aaf-8e90-0b548c543bba"}
+</script>
+
+    <script type="application/json" data-name="page-data">{"user_signed_in":false,"locale":"zh-CN","os":"other","read_mode":"day","read_font":"font2"}</script>
+    
+    <script src="//cdn2.jianshu.io/assets/babel-polyfill-2d33bdf1265b1805a404.js"></script>
+    <script src="//cdn2.jianshu.io/assets/web-base-2d33bdf1265b1805a404.js"></script>
+<script src="//cdn2.jianshu.io/assets/web-2d33bdf1265b1805a404.js"></script>
+    
+    <script src="//cdn2.jianshu.io/assets/web/pages/collections/show/entry-2d33bdf1265b1805a404.js"></script>
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-35169517-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+<script>
+  var _hmt = _hmt || [];
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "//hm.baidu.com/hm.js?0c0e9d9b1e7d617b3e6842e85b9fb068";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+  })();
+</script>
+
+<script>
+  (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      }
+      else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+  })();
+</script>
+
+  </body>
+</html>
+,<!DOCTYPE html>
+<!--[if IE 6]><html class="ie lt-ie8"><![endif]-->
+<!--[if IE 7]><html class="ie lt-ie8"><![endif]-->
+<!--[if IE 8]><html class="ie ie8"><![endif]-->
+<!--[if IE 9]><html class="ie ie9"><![endif]-->
+<!--[if !IE]><!--> <html> <!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"1255494d3a","applicationID":"15702971","transactionName":"e1daR0JWVV9RER9UWlRUUVBEUFZdR0xDX1pP","queueTime":69,"applicationTime":424,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1026.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta property="wb:webmaster" content="294ec9de89e7fadb" />
+  <meta property="qc:admins" content="104102651453316562112116375" />
+  <meta property="qc:admins" content="11635613706305617" />
+  <meta property="qc:admins" content="1163561616621163056375" />
+  <meta name="google-site-verification" content="cV4-qkUJZR6gmFeajx_UyPe47GW9vY6cnCrYtCHYNh4" />
+  <meta name="google-site-verification" content="HF7lfF8YEGs1qtCE-kPml8Z469e2RHhGajy6JPVy5XI" />
+  <meta http-equiv="mobile-agent" content="format=html5; url=http://www.jianshu.com/c/NEt52a?order_by=added_at&amp;page=97">
+
+  <!-- Apple -->
+  <meta name="apple-mobile-web-app-title" content="简书">
+
+  
+
+    <title>程序员 - 专题 - 简书</title>
+
+  <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="/+00Tq/SkkemAkJQsjocJPlpKoNM0JRXUdtnCl+4cPQ25fRp81LFEbhOUIzVGAPckr6UdjNUgXV/5rVr11xj5A==" />
+
+  <link rel="stylesheet" media="all" href="//cdn2.jianshu.io/assets/web-2d33bdf1265b1805a404.css" />
+  
+  <link rel="stylesheet" media="all" href="//cdn2.jianshu.io/assets/web/pages/collections/show/entry-2d33bdf1265b1805a404.css" />
+
+  <link href="//cdn2.jianshu.io/assets/favicons/favicon-783beb88ed621ceab614de960376ac0c.ico" rel="icon">
+      <link rel="apple-touch-icon-precomposed" href="//cdn2.jianshu.io/assets/apple-touch-icons/57-47624b2e2161e8eb144462c85db0a5ff.png" sizes="57x57" />
+      <link rel="apple-touch-icon-precomposed" href="//cdn2.jianshu.io/assets/apple-touch-icons/72-c00cde7cf98fc49e50cbb3ee1dcd5804.png" sizes="72x72" />
+      <link rel="apple-touch-icon-precomposed" href="//cdn2.jianshu.io/assets/apple-touch-icons/76-e8af0bdeaf1ba31e303b1fde8b5e66c4.png" sizes="76x76" />
+      <link rel="apple-touch-icon-precomposed" href="//cdn2.jianshu.io/assets/apple-touch-icons/114-f4c78569bbf1977e8382a5fd90c9237a.png" sizes="114x114" />
+      <link rel="apple-touch-icon-precomposed" href="//cdn2.jianshu.io/assets/apple-touch-icons/120-cf10c3711dba269522743729efe66bbc.png" sizes="120x120" />
+      <link rel="apple-touch-icon-precomposed" href="//cdn2.jianshu.io/assets/apple-touch-icons/152-7bd60457b5f3ecbf1343f0e6241be4f8.png" sizes="152x152" />
+</head>
+
+  <body lang="zh-CN" class="reader-black-font">
+    <!-- 全局顶部导航栏 -->
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="width-limit">
+    <!-- 左上方 Logo -->
+    <a class="logo" href="/"><img src="//cdn2.jianshu.io/assets/web/logo-58fd04f6f0de908401aa561cda6a0688.png" alt="Logo" /></a>
+
+    <!-- 右上角 -->
+      <!-- 未登录显示登录/注册/写文章 -->
+      <a class="btn write-btn" target="_blank" href="/writer#/">
+        <i class="iconfont ic-write"></i>写文章
+</a>      <a class="btn sign-up" href="/sign_up">注册</a>
+      <a class="btn log-in" href="/sign_in">登录</a>
+
+    <!-- 如果用户登录，显示下拉菜单 -->
+
+    <div id="view-mode-ctrl">
+    </div>
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu" aria-expanded="false">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="nav navbar-nav">
+            <li class="">
+              <a href="/">
+                <span class="menu-text">首页</span><i class="iconfont ic-navigation-discover menu-icon"></i>
+</a>            </li>
+            <li class="">
+              <a class="app-download-btn" href="/apps"><span class="menu-text">下载App</span><i class="iconfont ic-navigation-download menu-icon"></i></a>
+            </li>
+          <li class="search">
+            <form target="_blank" action="/search" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
+              <input type="text" name="q" id="q" value="" placeholder="搜索" class="search-input" />
+              <a class="search-btn" href="javascript:void(null)"><i class="iconfont ic-search"></i></a>
+              <!-- <div id="navbar-trending-search"></div> -->
+</form>          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+    
+
+<div class="container collection">
+  <div class="row">
+    <div class="col-xs-24 col-sm-16 main">
+      <!-- 专题头部模块 -->
+      <div class="main-top">
+        <a class="avatar-collection" href="/c/NEt52a">
+          <img src="//upload.jianshu.io/collections/images/16/computer_guy.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/240/h/240" alt="240" />
+</a>        <div class="follow-button" props-data-following="false" props-data-collection-id="16"></div>
+          <a class="btn btn-hollow" href="/sign_in">投稿</a>
+
+        <div class="title">
+          <a class="name" href="/c/NEt52a">程序员</a>
+        </div>
+        <div class="info">
+          收录了50552篇文章 · 391281人关注
+        </div>
+      </div>
+      <ul class="trigger-menu" data-pjax-container="#list-container"><li class=""><a href="/c/NEt52a?order_by=commented_at"><i class="iconfont ic-latestcomments"></i> 最新评论</a></li><li class="active"><a href="/c/NEt52a?order_by=added_at"><i class="iconfont ic-articles"></i> 最新收录</a></li><li class=""><a href="/c/NEt52a?order_by=top"><i class="iconfont ic-hot"></i> 热门</a></li></ul>
+      <div id="list-container">
+        <!-- 文章列表模块 -->
+<ul class="note-list" infinite-scroll-url="/c/NEt52a?order_by=added_at">
+  <li id="note-12440964" data-note-id="12440964" class="have-img">
+    <a class="wrap-img" href="/p/c8a6d267e948" target="_blank">
+      <img data-echo="//upload-images.jianshu.io/upload_images/2207199-469640ff51a31e3a.png?imageMogr2/auto-orient/strip|imageView2/1/w/375/h/300" class="img-blur" src="//upload-images.jianshu.io/upload_images/2207199-469640ff51a31e3a.png?imageMogr2/auto-orient/strip|imageView2/1/w/150/h/120" alt="120" />
+    </a>
+  <div class="content">
+    <div class="author">
+      <a class="avatar" target="_blank" href="/u/e07c2cd4bd62">
+        <img src="//upload.jianshu.io/users/upload_avatars/2207199/80cf554f-1532-4059-a441-6a7d3b77e5df.jpeg?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96" alt="96" />
+</a>      <div class="name">
+        <a class="blue-link" target="_blank" href="/u/e07c2cd4bd62">小蚁君</a>
+        <span class="time" data-shared-at="2017-05-15T18:45:49+08:00"></span>
+      </div>
+    </div>
+    <a class="title" target="_blank" href="/p/c8a6d267e948">Java中的重要概念（一）类、对象、变量</a>
+    <p class="abstract">
+      标签：类、对象、变量 看过我前几期的朋友，目前为止应该知道了，或者在心目中对Java学习有了一个大概的了解了，学习任何技术，必须“高屋建瓴”，必须心中有了大概的轮廓，如果还没...
+    </p>
+    <div class="meta">
+      <a target="_blank" href="/p/c8a6d267e948">
+        <i class="iconfont ic-list-read"></i> 26
+</a>        <a target="_blank" href="/p/c8a6d267e948#comments">
+          <i class="iconfont ic-list-comments"></i> 0
+</a>      <span><i class="iconfont ic-list-like"></i> 1</span>
+    </div>
+  </div>
+</li>
+<li id="note-12440920" data-note-id="12440920" class="have-img">
+    <a class="wrap-img" href="/p/504bdebe6cf9" target="_blank">
+      <img data-echo="//upload-images.jianshu.io/upload_images/5985409-83f423a1c9e616ab.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/375/h/300" class="img-blur" src="//upload-images.jianshu.io/upload_images/5985409-83f423a1c9e616ab.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/150/h/120" alt="120" />
+    </a>
+  <div class="content">
+    <div class="author">
+      <a class="avatar" target="_blank" href="/u/c674947e499b">
+        <img src="//upload.jianshu.io/users/upload_avatars/5985409/4f4b67ae-1f5d-4bff-aac0-fd94d08b96f5.png?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96" alt="96" />
+</a>      <div class="name">
+        <a class="blue-link" target="_blank" href="/u/c674947e499b">delbug</a>
+        <span class="time" data-shared-at="2017-05-15T18:29:51+08:00"></span>
+      </div>
+    </div>
+    <a class="title" target="_blank" href="/p/504bdebe6cf9">【delbug】新成员-代码狗🐶</a>
+    <p class="abstract">
+      ﻿delbug 云端BUG管理平台，简单、易用、免费，改善程序员们的工作方式。 Delbug是以改善程序员们的工作方式为宗旨，无需任何下载、在云端轻松创建一个项目，邀请成员，...
+    </p>
+    <div class="meta">
+      <a target="_blank" href="/p/504bdebe6cf9">
+        <i class="iconfont ic-list-read"></i> 53
+</a>        <a target="_blank" href="/p/504bdebe6cf9#comments">
+          <i class="iconfont ic-list-comments"></i> 0
+</a>      <span><i class="iconfont ic-list-like"></i> 4</span>
+    </div>
+  </div>
+</li>
+<li id="note-12438041" data-note-id="12438041" class="have-img">
+    <a class="wrap-img" href="/p/dd428fa42168" target="_blank">
+      <img data-echo="//upload-images.jianshu.io/upload_images/5035341-f79b88bb82447ebb.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/375/h/300" class="img-blur" src="//upload-images.jianshu.io/upload_images/5035341-f79b88bb82447ebb.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/150/h/120" alt="120" />
+    </a>
+  <div class="content">
+    <div class="author">
+      <a class="avatar" target="_blank" href="/u/eb7d2c4e8abe">
+        <img src="//upload.jianshu.io/users/upload_avatars/5035341/d2e4d16d-3873-4944-86d6-2b1b8f004af4.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96" alt="96" />
+</a>      <div class="name">
+        <a class="blue-link" target="_blank" href="/u/eb7d2c4e8abe">珈若读书吧</a>
+        <span class="time" data-shared-at="2017-05-15T18:02:07+08:00"></span>
+      </div>
+    </div>
+    <a class="title" target="_blank" href="/p/dd428fa42168">关于微信公众号，这几点你不得不知</a>
+    <p class="abstract">
+      在决定做微信公众号之前，我看了很多相关的资料，但没有形成完整笔记，所以打算在后面自己温习后，陆续分享给大家。 对于那些正要开通微信公众号和已经开通了的同志们，以下观点都是我亲...
+    </p>
+    <div class="meta">
+      <a target="_blank" href="/p/dd428fa42168">
+        <i class="iconfont ic-list-read"></i> 93
+</a>        <a target="_blank" href="/p/dd428fa42168#comments">
+          <i class="iconfont ic-list-comments"></i> 7
+</a>      <span><i class="iconfont ic-list-like"></i> 6</span>
+    </div>
+  </div>
+</li>
+<li id="note-12425409" data-note-id="12425409" class="have-img">
+    <a class="wrap-img" href="/p/9c6690ff4424" target="_blank">
+      <img data-echo="//upload-images.jianshu.io/upload_images/1656474-4cdf08a37ea59d8e.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/375/h/300" class="img-blur" src="//upload-images.jianshu.io/upload_images/1656474-4cdf08a37ea59d8e.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/150/h/120" alt="120" />
+    </a>
+  <div class="content">
+    <div class="author">
+      <a class="avatar" target="_blank" href="/u/884896eb4c89">
+        <img src="//upload.jianshu.io/users/upload_avatars/1656474/6240d86ab437.jpeg?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96" alt="96" />
+</a>      <div class="name">
+        <a class="blue-link" target="_blank" href="/u/884896eb4c89">秋之川</a>
+        <span class="time" data-shared-at="2017-05-15T21:57:00+08:00"></span>
+      </div>
+    </div>
+    <a class="title" target="_blank" href="/p/9c6690ff4424">【落叶178】《测试路上你问我答》（36）APP 页面的响应时间怎么测更准确？</a>
+    <p class="abstract">
+      【目录】 这是《落叶》文集里第178片落叶，希望你能喜欢，不为别的，只为这份坚持。 【背景】 有同学提问：请问用什么工具可以测试 android 的APP 登录功能(等类似功...
+    </p>
+    <div class="meta">
+      <a target="_blank" href="/p/9c6690ff4424">
+        <i class="iconfont ic-list-read"></i> 58
+</a>        <a target="_blank" href="/p/9c6690ff4424#comments">
+          <i class="iconfont ic-list-comments"></i> 0
+</a>      <span><i class="iconfont ic-list-like"></i> 3</span>
+    </div>
+  </div>
+</li>
+<li id="note-12445477" data-note-id="12445477" class="have-img">
+    <a class="wrap-img" href="/p/f48c8410ac79" target="_blank">
+      <img data-echo="//upload-images.jianshu.io/upload_images/5219651-cd0a06084d6f9188.png?imageMogr2/auto-orient/strip|imageView2/1/w/375/h/300" class="img-blur" src="//upload-images.jianshu.io/upload_images/5219651-cd0a06084d6f9188.png?imageMogr2/auto-orient/strip|imageView2/1/w/150/h/120" alt="120" />
+    </a>
+  <div class="content">
+    <div class="author">
+      <a class="avatar" target="_blank" href="/u/c34455009dd8">
+        <img src="//upload.jianshu.io/users/upload_avatars/5219651/b1f1624b-88af-4ce6-abf5-f6bed2e04465.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96" alt="96" />
+</a>      <div class="name">
+        <a class="blue-link" target="_blank" href="/u/c34455009dd8">小怪聊职场</a>
+        <span class="time" data-shared-at="2017-05-15T22:16:14+08:00"></span>
+      </div>
+    </div>
+    <a class="title" target="_blank" href="/p/f48c8410ac79">Java｜网络IO之同步、异步、阻塞、非阻塞</a>
+    <p class="abstract">
+      最近在看《大型分布式网站架构－设计与实践》这本书时，文中提到阻塞式IO，其实之前我在看一些书籍时也经常听到同步（synchronous） IO和异步（asynchronous...
+    </p>
+    <div class="meta">
+      <a target="_blank" href="/p/f48c8410ac79">
+        <i class="iconfont ic-list-read"></i> 101
+</a>        <a target="_blank" href="/p/f48c8410ac79#comments">
+          <i class="iconfont ic-list-comments"></i> 4
+</a>      <span><i class="iconfont ic-list-like"></i> 8</span>
+    </div>
+  </div>
+</li>
+<li id="note-12447777" data-note-id="12447777" class="">
+  <div class="content">
+    <div class="author">
+      <a class="avatar" target="_blank" href="/u/fb9b42994ed1">
+        <img src="//upload.jianshu.io/users/upload_avatars/5946542/364c92af-685f-4d23-8df5-e8c1cb2d851b.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96" alt="96" />
+</a>      <div class="name">
+        <a class="blue-link" target="_blank" href="/u/fb9b42994ed1">魏小豪</a>
+        <span class="time" data-shared-at="2017-05-15T22:31:23+08:00"></span>
+      </div>
+    </div>
+    <a class="title" target="_blank" href="/p/f231868a81a8">Linux—DAY04—部分小命令</a>
+    <p class="abstract">
+      Linux的命令非常之多，一个个的学习使用需要很长的周期，而且效果也不是很好，现在将一些命令在这里串讲一下 1）主机名 hostname 查看主机名 hostname new...
+    </p>
+    <div class="meta">
+      <a target="_blank" href="/p/f231868a81a8">
+        <i class="iconfont ic-list-read"></i> 22
+</a>        <a target="_blank" href="/p/f231868a81a8#comments">
+          <i class="iconfont ic-list-comments"></i> 0
+</a>      <span><i class="iconfont ic-list-like"></i> 0</span>
+    </div>
+  </div>
+</li>
+<li id="note-12427909" data-note-id="12427909" class="have-img">
+    <a class="wrap-img" href="/p/d5672586e42a" target="_blank">
+      <img data-echo="//upload-images.jianshu.io/upload_images/5988045-7d3316d264dd780f.png?imageMogr2/auto-orient/strip|imageView2/1/w/375/h/300" class="img-blur" src="//upload-images.jianshu.io/upload_images/5988045-7d3316d264dd780f.png?imageMogr2/auto-orient/strip|imageView2/1/w/150/h/120" alt="120" />
+    </a>
+  <div class="content">
+    <div class="author">
+      <a class="avatar" target="_blank" href="/u/76ea26e1200c">
+        <img src="//upload.jianshu.io/users/upload_avatars/5988045/7ef402a5-5d7a-48ce-80e5-53a4d2db67c5.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96" alt="96" />
+</a>      <div class="name">
+        <a class="blue-link" target="_blank" href="/u/76ea26e1200c">大牧莫邪</a>
+        <span class="time" data-shared-at="2017-05-15T12:00:05+08:00"></span>
+      </div>
+    </div>
+    <a class="title" target="_blank" href="/p/d5672586e42a">05.第一个Python程序</a>
+    <p class="abstract">
+      1. python是一种编程语言 python作为一种编程语言，通过编写程序的方式来解决问题python编写的程序，是文本文件，后缀名称为[.py] 2. 第一个python...
+    </p>
+    <div class="meta">
+      <a target="_blank" href="/p/d5672586e42a">
+        <i class="iconfont ic-list-read"></i> 19
+</a>        <a target="_blank" href="/p/d5672586e42a#comments">
+          <i class="iconfont ic-list-comments"></i> 0
+</a>      <span><i class="iconfont ic-list-like"></i> 1</span>
+    </div>
+  </div>
+</li>
+<li id="note-12429650" data-note-id="12429650" class="have-img">
+    <a class="wrap-img" href="/p/0df959c0a7f5" target="_blank">
+      <img data-echo="//upload-images.jianshu.io/upload_images/3805053-fc8561c781d93100.png?imageMogr2/auto-orient/strip|imageView2/1/w/375/h/300" class="img-blur" src="//upload-images.jianshu.io/upload_images/3805053-fc8561c781d93100.png?imageMogr2/auto-orient/strip|imageView2/1/w/150/h/120" alt="120" />
+    </a>
+  <div class="content">
+    <div class="author">
+      <a class="avatar" target="_blank" href="/u/11f495898891">
+        <img src="//upload.jianshu.io/users/upload_avatars/3805053/a1d1743121a8.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96" alt="96" />
+</a>      <div class="name">
+        <a class="blue-link" target="_blank" href="/u/11f495898891">流水潺湲</a>
+        <span class="time" data-shared-at="2017-05-15T14:00:08+08:00"></span>
+      </div>
+    </div>
+    <a class="title" target="_blank" href="/p/0df959c0a7f5">NoFragment使用|自定义轮播ViewPager(沉浸式)5.0+</a>
+    <p class="abstract">
+      Activity + 多个Fragment的形式代码开源在Github：https://github.com/yanzhenjie/NoFragmentDemo：https:...
+    </p>
+    <div class="meta">
+      <a target="_blank" href="/p/0df959c0a7f5">
+        <i class="iconfont ic-list-read"></i> 145
+</a>        <a target="_blank" href="/p/0df959c0a7f5#comments">
+          <i class="iconfont ic-list-comments"></i> 1
+</a>      <span><i class="iconfont ic-list-like"></i> 15</span>
+    </div>
+  </div>
+</li>
+<li id="note-12376640" data-note-id="12376640" class="">
+  <div class="content">
+    <div class="author">
+      <a class="avatar" target="_blank" href="/u/24da48b2ddb3">
+        <img src="//upload.jianshu.io/users/upload_avatars/1048365/9a9a01db6244.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96" alt="96" />
+</a>      <div class="name">
+        <a class="blue-link" target="_blank" href="/u/24da48b2ddb3">FlyElephant</a>
+        <span class="time" data-shared-at="2017-05-15T06:56:39+08:00"></span>
+      </div>
+    </div>
+    <a class="title" target="_blank" href="/p/2b1122209ec0">Swift-工厂模式</a>
+    <p class="abstract">
+      工厂模式(Factory Pattern)属于创建型模式，它提供了一种创建对象的最佳方式，常见的工厂模式有三种简单工厂模式、工厂模式和抽象工厂模式. 简单工厂模式是也叫静态工...
+    </p>
+    <div class="meta">
+      <a target="_blank" href="/p/2b1122209ec0">
+        <i class="iconfont ic-list-read"></i> 15
+</a>        <a target="_blank" href="/p/2b1122209ec0#comments">
+          <i class="iconfont ic-list-comments"></i> 0
+</a>      <span><i class="iconfont ic-list-like"></i> 1</span>
+    </div>
+  </div>
+</li>
+<li id="note-12474655" data-note-id="12474655" class="">
+  <div class="content">
+    <div class="author">
+      <a class="avatar" target="_blank" href="/u/bbd652e0e6af">
+        <img src="//upload.jianshu.io/users/upload_avatars/449763/25aa755f9215.png?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96" alt="96" />
+</a>      <div class="name">
+        <a class="blue-link" target="_blank" href="/u/bbd652e0e6af">蒲公英开发者服务平台</a>
+        <span class="time" data-shared-at="2017-05-16T16:56:19+08:00"></span>
+      </div>
+    </div>
+    <a class="title" target="_blank" href="/p/180570edd04a">WannaCry 2.0 升级再来，这一次是 Windows 系统，下一次可能就是 APP 的客户端和服务端！</a>
+    <p class="abstract">
+      从5月12日开始爆发，勒索病毒的攻势愈演愈烈，目前全球至少一百五十个国家地区受到此病毒攻击，国内先是校园网大面积感染，进而大量企业内网遭受攻击，甚至有公安网络也未能幸免，目前...
+    </p>
+    <div class="meta">
+      <a target="_blank" href="/p/180570edd04a">
+        <i class="iconfont ic-list-read"></i> 38
+</a>        <a target="_blank" href="/p/180570edd04a#comments">
+          <i class="iconfont ic-list-comments"></i> 0
+</a>      <span><i class="iconfont ic-list-like"></i> 0</span>
+    </div>
+  </div>
+</li>
+
+</ul>
+
+      </div>
+    </div>
+    <div class="col-xs-24 col-sm-7 col-sm-offset-1 aside">
+        <p class="title">专题公告</p>
+        <div class="description js-description">
+          <p>如果你是程序员，或者有一颗喜欢写程序的心，喜欢分享技术干货、项目经验、程序员日常囧事等等，欢迎投稿《程序员》专题。</p>
+
+<p>专题主编：小彤花园 <a href="http://www.jianshu.com/users/4a4eb4feee62/">http://www.jianshu.com/users/4a4eb4feee62/</a>
+<br />编委：Kulbear</p>
+
+<p>【程序员】专题拒稿指北：<a href="http://www.jianshu.com/p/7c8b33b5f63b">http://www.jianshu.com/p/7c8b33b5f63b</a></p>
+
+<p>投稿须知：
+<br />1.收录相关技术文章，但不限于技术，也可以是项目经验类的文章和程序员日常。
+<br />2.文章內不得有任何推广信息。包括但不...</p>
+          <a data-action="toggle-description" class="open" href="javascript:void(null);">展开描述 <i class="iconfont ic-show"></i></a>
+        </div>
+      <div class="share">
+        <span>分享至</span>
+        <a href="javascript:void((function(s,d,e,r,l,p,t,z,c){var%20f=&#39;http://v.t.sina.com.cn/share/share.php?appkey=1881139527&#39;,u=z||d.location,p=[&#39;&amp;url=&#39;,e(u),&#39;&amp;title=&#39;,e(t||d.title),&#39;&amp;source=&#39;,e(r),&#39;&amp;sourceUrl=&#39;,e(l),&#39;&amp;content=&#39;,c||&#39;gb2312&#39;,&#39;&amp;pic=&#39;,e(p||&#39;&#39;)].join(&#39;&#39;);function%20a(){if(!window.open([f,p].join(&#39;&#39;),&#39;mb&#39;,[&#39;toolbar=0,status=0,resizable=1,width=440,height=430,left=&#39;,(s.width-440)/2,&#39;,top=&#39;,(s.height-430)/2].join(&#39;&#39;)))u.href=[f,p].join(&#39;&#39;);};if(/Firefox/.test(navigator.userAgent))setTimeout(a,0);else%20a();})(screen,document,encodeURIComponent,&#39;&#39;,&#39;&#39;,&#39;http://upload.jianshu.io/collections/images/16/computer_guy.jpg&#39;, &#39;推荐专题《程序员》（ 分享自 @简书 ）&#39;,&#39;http://www.jianshu.com/c/NEt52a?utm_campaign=maleskine&amp;utm_content=collection&amp;utm_medium=reader_share&amp;utm_source=weibo&#39;,&#39;页面编码gb2312|utf-8默认gb2312&#39;));"><i class="iconfont ic-share-weibo"></i></a>
+        <a data-action="weixin-share"><i class="iconfont ic-share-wechat"></i></a>
+        <a class="" href=""><i class="iconfont ic-share-more"></i></a>
+      </div>
+      <div class="editors-and-subscribers-container"></div>
+    </div>
+  </div>
+</div>
+<div data-vcomp="side-tool"></div>
+
+<script type="application/json" data-name="collection">
+  {"id":16,"slug":"NEt52a","owner":{"id":259},"content":"<p>如果你是程序员，或者有一颗喜欢写程序的心，喜欢分享技术干货、项目经验、程序员日常囧事等等，欢迎投稿《程序员》专题。</p>\n\n<p>专题主编：小彤花园 <a href=\"http://www.jianshu.com/users/4a4eb4feee62/\" class=\"blue-link\">http://www.jianshu.com/users/4a4eb4feee62/</a>\n<br />编委：Kulbear</p>\n\n<p>【程序员】专题拒稿指北：<a href=\"http://www.jianshu.com/p/7c8b33b5f63b\" class=\"blue-link\">http://www.jianshu.com/p/7c8b33b5f63b</a></p>\n\n<p>投稿须知：\n<br />1.收录相关技术文章，但不限于技术，也可以是项目经验类的文章和程序员日常。\n<br />2.文章內不得有任何推广信息。包括但不限于公众号、微博、微信，更不得在通过投稿后再修改文章加入推广信息。你可以将这些推广以及个人信息放在个人主页介绍里。\n<br />3.字数极少，段落混乱，大段代码没有放到代码框的文章不收录\n<br />4.不相关的内容不收录，请确认文章内容和本专题相关</p>\n\n<p>目前简书针对优质作者及爱好者，开设了官方程序员微信群，希望加入请发简信给主编小彤花园索取个人微信，主编会将你加入到【简书-程序员】微信群，分享内容，收获知识。添加微信时备注[简书ID]。</p>\n\n<p>微信添加简书大妈（jianshu_dama），进入简书丰富多彩的专题社群！</p>","short_content":"<p>如果你是程序员，或者有一颗喜欢写程序的心，喜欢分享技术干货、项目经验、程序员日常囧事等等，欢迎投稿《程序员》专题。</p>\n\n<p>专题主编：小彤花园 <a href=\"http://www.jianshu.com/users/4a4eb4feee62/\" class=\"blue-link\">http://www.jianshu.com/users/4a4eb4feee62/</a>\n<br />编委：Kulbear</p>\n\n<p>【程序员】专题拒稿指北：<a href=\"http://www.jianshu.com/p/7c8b33b5f63b\" class=\"blue-link\">http://www.jianshu.com/p/7c8b33b5f63b</a></p>\n\n<p>投稿须知：\n<br />1.收录相关技术文章，但不限于技术，也可以是项目经验类的文章和程序员日常。\n<br />2.文章內不得有任何推广信息。包括但不...</p>","subscribers_count":391281}
+</script>
+
+<script type='application/json' data-name='uuid'>
+  {"uuid":"50a8e1c4-5017-4576-85c9-1ea3f0c127ad"}
+</script>
+
+    <script type="application/json" data-name="page-data">{"user_signed_in":false,"locale":"zh-CN","os":"other","read_mode":"day","read_font":"font2"}</script>
+    
+    <script src="//cdn2.jianshu.io/assets/babel-polyfill-2d33bdf1265b1805a404.js"></script>
+    <script src="//cdn2.jianshu.io/assets/web-base-2d33bdf1265b1805a404.js"></script>
+<script src="//cdn2.jianshu.io/assets/web-2d33bdf1265b1805a404.js"></script>
+    
+    <script src="//cdn2.jianshu.io/assets/web/pages/collections/show/entry-2d33bdf1265b1805a404.js"></script>
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-35169517-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+<script>
+  var _hmt = _hmt || [];
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "//hm.baidu.com/hm.js?0c0e9d9b1e7d617b3e6842e85b9fb068";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+  })();
+</script>
+
+<script>
+  (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      }
+      else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+  })();
+</script>
+
+  </body>
+</html>
+,<!DOCTYPE html>
+<!--[if IE 6]><html class="ie lt-ie8"><![endif]-->
+<!--[if IE 7]><html class="ie lt-ie8"><![endif]-->
+<!--[if IE 8]><html class="ie ie8"><![endif]-->
+<!--[if IE 9]><html class="ie ie9"><![endif]-->
+<!--[if !IE]><!--> <html> <!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"1255494d3a","applicationID":"15702971","transactionName":"e1daR0JWVV9RER9UWlRUUVBEUFZdR0xDX1pP","queueTime":2,"applicationTime":389,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1026.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta property="wb:webmaster" content="294ec9de89e7fadb" />
+  <meta property="qc:admins" content="104102651453316562112116375" />
+  <meta property="qc:admins" content="11635613706305617" />
+  <meta property="qc:admins" content="1163561616621163056375" />
+  <meta name="google-site-verification" content="cV4-qkUJZR6gmFeajx_UyPe47GW9vY6cnCrYtCHYNh4" />
+  <meta name="google-site-verification" content="HF7lfF8YEGs1qtCE-kPml8Z469e2RHhGajy6JPVy5XI" />
+  <meta http-equiv="mobile-agent" content="format=html5; url=http://www.jianshu.com/c/NEt52a?order_by=added_at&amp;page=98">
+
+  <!-- Apple -->
+  <meta name="apple-mobile-web-app-title" content="简书">
+
+  
+
+    <title>程序员 - 专题 - 简书</title>
+
+  <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="L+whyVlXXN0GhAhXcNJrWWzBvxDNOUbYvnzEp5OuaFVupJQjFM35TQrG0pKDaOkpgrnt/82GNRLDNXtHPp/YOg==" />
+
+  <link rel="stylesheet" media="all" href="//cdn2.jianshu.io/assets/web-2d33bdf1265b1805a404.css" />
+  
+  <link rel="stylesheet" media="all" href="//cdn2.jianshu.io/assets/web/pages/collections/show/entry-2d33bdf1265b1805a404.css" />
+
+  <link href="//cdn2.jianshu.io/assets/favicons/favicon-783beb88ed621ceab614de960376ac0c.ico" rel="icon">
+      <link rel="apple-touch-icon-precomposed" href="//cdn2.jianshu.io/assets/apple-touch-icons/57-47624b2e2161e8eb144462c85db0a5ff.png" sizes="57x57" />
+      <link rel="apple-touch-icon-precomposed" href="//cdn2.jianshu.io/assets/apple-touch-icons/72-c00cde7cf98fc49e50cbb3ee1dcd5804.png" sizes="72x72" />
+      <link rel="apple-touch-icon-precomposed" href="//cdn2.jianshu.io/assets/apple-touch-icons/76-e8af0bdeaf1ba31e303b1fde8b5e66c4.png" sizes="76x76" />
+      <link rel="apple-touch-icon-precomposed" href="//cdn2.jianshu.io/assets/apple-touch-icons/114-f4c78569bbf1977e8382a5fd90c9237a.png" sizes="114x114" />
+      <link rel="apple-touch-icon-precomposed" href="//cdn2.jianshu.io/assets/apple-touch-icons/120-cf10c3711dba269522743729efe66bbc.png" sizes="120x120" />
+      <link rel="apple-touch-icon-precomposed" href="//cdn2.jianshu.io/assets/apple-touch-icons/152-7bd60457b5f3ecbf1343f0e6241be4f8.png" sizes="152x152" />
+</head>
+
+  <body lang="zh-CN" class="reader-black-font">
+    <!-- 全局顶部导航栏 -->
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="width-limit">
+    <!-- 左上方 Logo -->
+    <a class="logo" href="/"><img src="//cdn2.jianshu.io/assets/web/logo-58fd04f6f0de908401aa561cda6a0688.png" alt="Logo" /></a>
+
+    <!-- 右上角 -->
+      <!-- 未登录显示登录/注册/写文章 -->
+      <a class="btn write-btn" target="_blank" href="/writer#/">
+        <i class="iconfont ic-write"></i>写文章
+</a>      <a class="btn sign-up" href="/sign_up">注册</a>
+      <a class="btn log-in" href="/sign_in">登录</a>
+
+    <!-- 如果用户登录，显示下拉菜单 -->
+
+    <div id="view-mode-ctrl">
+    </div>
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu" aria-expanded="false">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="nav navbar-nav">
+            <li class="">
+              <a href="/">
+                <span class="menu-text">首页</span><i class="iconfont ic-navigation-discover menu-icon"></i>
+</a>            </li>
+            <li class="">
+              <a class="app-download-btn" href="/apps"><span class="menu-text">下载App</span><i class="iconfont ic-navigation-download menu-icon"></i></a>
+            </li>
+          <li class="search">
+            <form target="_blank" action="/search" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
+              <input type="text" name="q" id="q" value="" placeholder="搜索" class="search-input" />
+              <a class="search-btn" href="javascript:void(null)"><i class="iconfont ic-search"></i></a>
+              <!-- <div id="navbar-trending-search"></div> -->
+</form>          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+    
+
+<div class="container collection">
+  <div class="row">
+    <div class="col-xs-24 col-sm-16 main">
+      <!-- 专题头部模块 -->
+      <div class="main-top">
+        <a class="avatar-collection" href="/c/NEt52a">
+          <img src="//upload.jianshu.io/collections/images/16/computer_guy.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/240/h/240" alt="240" />
+</a>        <div class="follow-button" props-data-following="false" props-data-collection-id="16"></div>
+          <a class="btn btn-hollow" href="/sign_in">投稿</a>
+
+        <div class="title">
+          <a class="name" href="/c/NEt52a">程序员</a>
+        </div>
+        <div class="info">
+          收录了50552篇文章 · 391281人关注
+        </div>
+      </div>
+      <ul class="trigger-menu" data-pjax-container="#list-container"><li class=""><a href="/c/NEt52a?order_by=commented_at"><i class="iconfont ic-latestcomments"></i> 最新评论</a></li><li class="active"><a href="/c/NEt52a?order_by=added_at"><i class="iconfont ic-articles"></i> 最新收录</a></li><li class=""><a href="/c/NEt52a?order_by=top"><i class="iconfont ic-hot"></i> 热门</a></li></ul>
+      <div id="list-container">
+        <!-- 文章列表模块 -->
+<ul class="note-list" infinite-scroll-url="/c/NEt52a?order_by=added_at">
+  <li id="note-12474588" data-note-id="12474588" class="have-img">
+    <a class="wrap-img" href="/p/d4a018949f55" target="_blank">
+      <img data-echo="//upload-images.jianshu.io/upload_images/1159872-c3eaa972b287582b.png?imageMogr2/auto-orient/strip|imageView2/1/w/375/h/300" class="img-blur" src="//upload-images.jianshu.io/upload_images/1159872-c3eaa972b287582b.png?imageMogr2/auto-orient/strip|imageView2/1/w/150/h/120" alt="120" />
+    </a>
+  <div class="content">
+    <div class="author">
+      <a class="avatar" target="_blank" href="/u/6fa5c59c9f2a">
+        <img src="//upload.jianshu.io/users/upload_avatars/1159872/c63fa437d1e5.jpeg?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96" alt="96" />
+</a>      <div class="name">
+        <a class="blue-link" target="_blank" href="/u/6fa5c59c9f2a">LvesLi</a>
+        <span class="time" data-shared-at="2017-05-16T16:58:10+08:00"></span>
+      </div>
+    </div>
+    <a class="title" target="_blank" href="/p/d4a018949f55">Swift开源框架发布到CocoaPods</a>
+    <p class="abstract">
+      iOS开发中大多使用CocoaPods进行第三方框架的管理，关于如何使用CocoaPods我们就不多说了，今天主要介绍如何把自己写的库文件支持CocoaPods让更多的开发者...
+    </p>
+    <div class="meta">
+      <a target="_blank" href="/p/d4a018949f55">
+        <i class="iconfont ic-list-read"></i> 36
+</a>        <a target="_blank" href="/p/d4a018949f55#comments">
+          <i class="iconfont ic-list-comments"></i> 0
+</a>      <span><i class="iconfont ic-list-like"></i> 3</span>
+    </div>
+  </div>
+</li>
+<li id="note-12623918" data-note-id="12623918" class="have-img">
+    <a class="wrap-img" href="/p/40c6abec6401" target="_blank">
+      <img data-echo="//upload-images.jianshu.io/upload_images/5276837-d2cecca3ed91ff2a.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/375/h/300" class="img-blur" src="//upload-images.jianshu.io/upload_images/5276837-d2cecca3ed91ff2a.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/150/h/120" alt="120" />
+    </a>
+  <div class="content">
+    <div class="author">
+      <a class="avatar" target="_blank" href="/u/7ca90649bbfd">
+        <img src="//upload.jianshu.io/users/upload_avatars/5276837/65cebffa-0c74-4f84-b5ab-c6fb65a11c46.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96" alt="96" />
+</a>      <div class="name">
+        <a class="blue-link" target="_blank" href="/u/7ca90649bbfd">smartbeng</a>
+        <span class="time" data-shared-at="2017-05-21T09:57:47+08:00"></span>
+      </div>
+    </div>
+    <a class="title" target="_blank" href="/p/40c6abec6401">移动端开发者以后的路在哪里？</a>
+    <p class="abstract">
+      本文未经授权，不得转载，侵权必究！曾经因高薪和需求量巨大，而火爆一时的移动端开发者（Android，ios），如今的路却是不再那么顺畅！因原生开发成本高和效率低而导致涌现出来...
+    </p>
+    <div class="meta">
+      <a target="_blank" href="/p/40c6abec6401">
+        <i class="iconfont ic-list-read"></i> 5035
+</a>        <a target="_blank" href="/p/40c6abec6401#comments">
+          <i class="iconfont ic-list-comments"></i> 114
+</a>      <span><i class="iconfont ic-list-like"></i> 108</span>
+        <span><i class="iconfont ic-list-money"></i> 3</span>
+    </div>
+  </div>
+</li>
+<li id="note-12627851" data-note-id="12627851" class="">
+  <div class="content">
+    <div class="author">
+      <a class="avatar" target="_blank" href="/u/2fd79b98973e">
+        <img src="//upload.jianshu.io/users/upload_avatars/1966942/afc26ad38a2e.jpeg?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96" alt="96" />
+</a>      <div class="name">
+        <a class="blue-link" target="_blank" href="/u/2fd79b98973e">帅气小伙</a>
+        <span class="time" data-shared-at="2017-05-21T10:05:57+08:00"></span>
+      </div>
+    </div>
+    <a class="title" target="_blank" href="/p/6f0308ad945d">可配置化的excel导入</a>
+    <p class="abstract">
+      Excel导入在实际的开发中，经常会用到，可是我们往往需要研究一番这个Excel表格的结构才能够着手写Excel导入的代码，而这份代码有不能够复用，常常导致一表一码的情况，为...
+    </p>
+    <div class="meta">
+      <a target="_blank" href="/p/6f0308ad945d">
+        <i class="iconfont ic-list-read"></i> 23
+</a>        <a target="_blank" href="/p/6f0308ad945d#comments">
+          <i class="iconfont ic-list-comments"></i> 0
+</a>      <span><i class="iconfont ic-list-like"></i> 4</span>
+        <span><i class="iconfont ic-list-money"></i> 1</span>
+    </div>
+  </div>
+</li>
+<li id="note-11436951" data-note-id="11436951" class="">
+  <div class="content">
+    <div class="author">
+      <a class="avatar" target="_blank" href="/u/6913c26d8b2c">
+        <img src="//upload.jianshu.io/users/upload_avatars/4482847/db9e6f35-2337-47b8-92fa-3b3524947711.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96" alt="96" />
+</a>      <div class="name">
+        <a class="blue-link" target="_blank" href="/u/6913c26d8b2c">找不到工作</a>
+        <span class="time" data-shared-at="2017-05-12T20:33:25+08:00"></span>
+      </div>
+    </div>
+    <a class="title" target="_blank" href="/p/10f822b3deda">6.828 操作系统 lab4 实验报告：Part A</a>
+    <p class="abstract">
+      简介 在 lab4 中我们将实现多个同时运行的用户进程之间的抢占式多任务处理。在 part A 中，我们需要给 JOS 增加多处理器支持。实现轮询( round-robin,...
+    </p>
+    <div class="meta">
+      <a target="_blank" href="/p/10f822b3deda">
+        <i class="iconfont ic-list-read"></i> 4
+</a>        <a target="_blank" href="/p/10f822b3deda#comments">
+          <i class="iconfont ic-list-comments"></i> 0
+</a>      <span><i class="iconfont ic-list-like"></i> 0</span>
+    </div>
+  </div>
+</li>
+<li id="note-11515155" data-note-id="11515155" class="">
+  <div class="content">
+    <div class="author">
+      <a class="avatar" target="_blank" href="/u/aea30b9a5690">
+        <img src="//upload.jianshu.io/users/upload_avatars/1648725/d216db3359a7?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96" alt="96" />
+</a>      <div class="name">
+        <a class="blue-link" target="_blank" href="/u/aea30b9a5690">王鑫20111</a>
+        <span class="time" data-shared-at="2017-04-19T16:03:31+08:00"></span>
+      </div>
+    </div>
+    <a class="title" target="_blank" href="/p/46d91ae65f60">RunLoop在实际开发过程中的应用(二)</a>
+    <p class="abstract">
+      Tip 1.UIImageView延迟加载照片 2.线程保活 3.子线程中执行NSTimer 4.performSelector 5.自动释放池 一.UIImageView延...
+    </p>
+    <div class="meta">
+      <a target="_blank" href="/p/46d91ae65f60">
+        <i class="iconfont ic-list-read"></i> 21
+</a>        <a target="_blank" href="/p/46d91ae65f60#comments">
+          <i class="iconfont ic-list-comments"></i> 2
+</a>      <span><i class="iconfont ic-list-like"></i> 4</span>
+    </div>
+  </div>
+</li>
+<li id="note-6429903" data-note-id="6429903" class="have-img">
+    <a class="wrap-img" href="/p/b8414d2e5597" target="_blank">
+      <img data-echo="//upload-images.jianshu.io/upload_images/1648725-912222014cac00c5.png?imageMogr2/auto-orient/strip|imageView2/1/w/375/h/300" class="img-blur" src="//upload-images.jianshu.io/upload_images/1648725-912222014cac00c5.png?imageMogr2/auto-orient/strip|imageView2/1/w/150/h/120" alt="120" />
+    </a>
+  <div class="content">
+    <div class="author">
+      <a class="avatar" target="_blank" href="/u/aea30b9a5690">
+        <img src="//upload.jianshu.io/users/upload_avatars/1648725/d216db3359a7?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96" alt="96" />
+</a>      <div class="name">
+        <a class="blue-link" target="_blank" href="/u/aea30b9a5690">王鑫20111</a>
+        <span class="time" data-shared-at="2016-10-19T20:37:55+08:00"></span>
+      </div>
+    </div>
+    <a class="title" target="_blank" href="/p/b8414d2e5597">快速上手正则表达式</a>
+    <p class="abstract">
+      1.为毛我要写这个？ 公司要求作出这样的效果，过去真心没有接触过。最后通过正则判断出了要去高亮的文字，但是没办法一下子去删除#话题#，或者@李小龙,中国石油(111100)这...
+    </p>
+    <div class="meta">
+      <a target="_blank" href="/p/b8414d2e5597">
+        <i class="iconfont ic-list-read"></i> 62
+</a>        <a target="_blank" href="/p/b8414d2e5597#comments">
+          <i class="iconfont ic-list-comments"></i> 2
+</a>      <span><i class="iconfont ic-list-like"></i> 6</span>
+    </div>
+  </div>
+</li>
+<li id="note-12610948" data-note-id="12610948" class="have-img">
+    <a class="wrap-img" href="/p/5b045730a05c" target="_blank">
+      <img data-echo="//upload-images.jianshu.io/upload_images/3729817-12bb20a06f03809f.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/375/h/300" class="img-blur" src="//upload-images.jianshu.io/upload_images/3729817-12bb20a06f03809f.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/150/h/120" alt="120" />
+    </a>
+  <div class="content">
+    <div class="author">
+      <a class="avatar" target="_blank" href="/u/2ec076c47717">
+        <img src="//upload.jianshu.io/users/upload_avatars/3729817/b0120859a0de.jpeg?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96" alt="96" />
+</a>      <div class="name">
+        <a class="blue-link" target="_blank" href="/u/2ec076c47717">向布谷鸟说早安</a>
+        <span class="time" data-shared-at="2017-05-20T17:52:53+08:00"></span>
+      </div>
+    </div>
+    <a class="title" target="_blank" href="/p/5b045730a05c">面对996，我们该如何应对？</a>
+    <p class="abstract">
+      随着科技的快速发展，各大互联网公司，争相在抢市场，抢数据，抢流量。 在这背后，是无数的创业工作者的日以继夜的奔波，他们辛辛苦苦创立了公司，有了雇佣劳动力的资本。 于是为了不让...
+    </p>
+    <div class="meta">
+      <a target="_blank" href="/p/5b045730a05c">
+        <i class="iconfont ic-list-read"></i> 28
+</a>        <a target="_blank" href="/p/5b045730a05c#comments">
+          <i class="iconfont ic-list-comments"></i> 0
+</a>      <span><i class="iconfont ic-list-like"></i> 3</span>
+    </div>
+  </div>
+</li>
+<li id="note-12630628" data-note-id="12630628" class="have-img">
+    <a class="wrap-img" href="/p/206cf7d63555" target="_blank">
+      <img data-echo="//upload-images.jianshu.io/upload_images/2245742-56159522f6486f14.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/375/h/300" class="img-blur" src="//upload-images.jianshu.io/upload_images/2245742-56159522f6486f14.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/150/h/120" alt="120" />
+    </a>
+  <div class="content">
+    <div class="author">
+      <a class="avatar" target="_blank" href="/u/5bbe008f9b84">
+        <img src="//upload.jianshu.io/users/upload_avatars/2245742/ceb8db8cd229.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96" alt="96" />
+</a>      <div class="name">
+        <a class="blue-link" target="_blank" href="/u/5bbe008f9b84">治电小白菜</a>
+        <span class="time" data-shared-at="2017-05-21T10:41:46+08:00"></span>
+      </div>
+    </div>
+    <a class="title" target="_blank" href="/p/206cf7d63555">搭建简易的物联网服务端和客户端-第三次增补（二十二）</a>
+    <p class="abstract">
+      记得上次Maibu显示的时候，我无法吧数据单独显示出来，最后只能把数据全放到一起，通过api提供出来，像这样{&quot;data&quot;:&quot;32  在  60&quot;} 很无奈。不过经过Maib...
+    </p>
+    <div class="meta">
+      <a target="_blank" href="/p/206cf7d63555">
+        <i class="iconfont ic-list-read"></i> 16
+</a>        <a target="_blank" href="/p/206cf7d63555#comments">
+          <i class="iconfont ic-list-comments"></i> 0
+</a>      <span><i class="iconfont ic-list-like"></i> 1</span>
+    </div>
+  </div>
+</li>
+<li id="note-12630434" data-note-id="12630434" class="">
+  <div class="content">
+    <div class="author">
+      <a class="avatar" target="_blank" href="/u/3f760ff4b0b0">
+        <img src="//upload.jianshu.io/users/upload_avatars/6132900/c0edbe3a-e454-4a02-afd6-894aa05dba48?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96" alt="96" />
+</a>      <div class="name">
+        <a class="blue-link" target="_blank" href="/u/3f760ff4b0b0">CakeL</a>
+        <span class="time" data-shared-at="2017-05-21T10:44:14+08:00"></span>
+      </div>
+    </div>
+    <a class="title" target="_blank" href="/p/db5c6db3c0a3">用python3+flask+uWSGI+supervisor部署web应用时EncodingError的解决方法</a>
+    <p class="abstract">
+      问题： Python3其实是默认使用unicode（UTF-8）编码的，但是当使用uWSGI来部署应用并且用supervisor作进程守护的时候，就会出现编码问题，比较典型的...
+    </p>
+    <div class="meta">
+      <a target="_blank" href="/p/db5c6db3c0a3">
+        <i class="iconfont ic-list-read"></i> 4
+</a>        <a target="_blank" href="/p/db5c6db3c0a3#comments">
+          <i class="iconfont ic-list-comments"></i> 0
+</a>      <span><i class="iconfont ic-list-like"></i> 0</span>
+    </div>
+  </div>
+</li>
+<li id="note-7267396" data-note-id="7267396" class="">
+  <div class="content">
+    <div class="author">
+      <a class="avatar" target="_blank" href="/u/99b87e047a47">
+        <img src="//upload.jianshu.io/users/upload_avatars/2024535/9670c0122771.png?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96" alt="96" />
+</a>      <div class="name">
+        <a class="blue-link" target="_blank" href="/u/99b87e047a47">CFOX</a>
+        <span class="time" data-shared-at="2016-11-28T15:09:36+08:00"></span>
+      </div>
+    </div>
+    <a class="title" target="_blank" href="/p/97dbefe0ddbb">Android Studio 多渠道打包和打包时设置包名</a>
+    <p class="abstract">
+      使用 Android Studio 进行多渠道打包超级简单，废话不多说，两步： 两种打包方式： 方式一： 1、在清单文件 AndroidManifest.xml 中添加如下带...
+    </p>
+    <div class="meta">
+      <a target="_blank" href="/p/97dbefe0ddbb">
+        <i class="iconfont ic-list-read"></i> 1005
+</a>        <a target="_blank" href="/p/97dbefe0ddbb#comments">
+          <i class="iconfont ic-list-comments"></i> 1
+</a>      <span><i class="iconfont ic-list-like"></i> 3</span>
+    </div>
+  </div>
+</li>
+
+</ul>
+
+      </div>
+    </div>
+    <div class="col-xs-24 col-sm-7 col-sm-offset-1 aside">
+        <p class="title">专题公告</p>
+        <div class="description js-description">
+          <p>如果你是程序员，或者有一颗喜欢写程序的心，喜欢分享技术干货、项目经验、程序员日常囧事等等，欢迎投稿《程序员》专题。</p>
+
+<p>专题主编：小彤花园 <a href="http://www.jianshu.com/users/4a4eb4feee62/">http://www.jianshu.com/users/4a4eb4feee62/</a>
+<br />编委：Kulbear</p>
+
+<p>【程序员】专题拒稿指北：<a href="http://www.jianshu.com/p/7c8b33b5f63b">http://www.jianshu.com/p/7c8b33b5f63b</a></p>
+
+<p>投稿须知：
+<br />1.收录相关技术文章，但不限于技术，也可以是项目经验类的文章和程序员日常。
+<br />2.文章內不得有任何推广信息。包括但不...</p>
+          <a data-action="toggle-description" class="open" href="javascript:void(null);">展开描述 <i class="iconfont ic-show"></i></a>
+        </div>
+      <div class="share">
+        <span>分享至</span>
+        <a href="javascript:void((function(s,d,e,r,l,p,t,z,c){var%20f=&#39;http://v.t.sina.com.cn/share/share.php?appkey=1881139527&#39;,u=z||d.location,p=[&#39;&amp;url=&#39;,e(u),&#39;&amp;title=&#39;,e(t||d.title),&#39;&amp;source=&#39;,e(r),&#39;&amp;sourceUrl=&#39;,e(l),&#39;&amp;content=&#39;,c||&#39;gb2312&#39;,&#39;&amp;pic=&#39;,e(p||&#39;&#39;)].join(&#39;&#39;);function%20a(){if(!window.open([f,p].join(&#39;&#39;),&#39;mb&#39;,[&#39;toolbar=0,status=0,resizable=1,width=440,height=430,left=&#39;,(s.width-440)/2,&#39;,top=&#39;,(s.height-430)/2].join(&#39;&#39;)))u.href=[f,p].join(&#39;&#39;);};if(/Firefox/.test(navigator.userAgent))setTimeout(a,0);else%20a();})(screen,document,encodeURIComponent,&#39;&#39;,&#39;&#39;,&#39;http://upload.jianshu.io/collections/images/16/computer_guy.jpg&#39;, &#39;推荐专题《程序员》（ 分享自 @简书 ）&#39;,&#39;http://www.jianshu.com/c/NEt52a?utm_campaign=maleskine&amp;utm_content=collection&amp;utm_medium=reader_share&amp;utm_source=weibo&#39;,&#39;页面编码gb2312|utf-8默认gb2312&#39;));"><i class="iconfont ic-share-weibo"></i></a>
+        <a data-action="weixin-share"><i class="iconfont ic-share-wechat"></i></a>
+        <a class="" href=""><i class="iconfont ic-share-more"></i></a>
+      </div>
+      <div class="editors-and-subscribers-container"></div>
+    </div>
+  </div>
+</div>
+<div data-vcomp="side-tool"></div>
+
+<script type="application/json" data-name="collection">
+  {"id":16,"slug":"NEt52a","owner":{"id":259},"content":"<p>如果你是程序员，或者有一颗喜欢写程序的心，喜欢分享技术干货、项目经验、程序员日常囧事等等，欢迎投稿《程序员》专题。</p>\n\n<p>专题主编：小彤花园 <a href=\"http://www.jianshu.com/users/4a4eb4feee62/\" class=\"blue-link\">http://www.jianshu.com/users/4a4eb4feee62/</a>\n<br />编委：Kulbear</p>\n\n<p>【程序员】专题拒稿指北：<a href=\"http://www.jianshu.com/p/7c8b33b5f63b\" class=\"blue-link\">http://www.jianshu.com/p/7c8b33b5f63b</a></p>\n\n<p>投稿须知：\n<br />1.收录相关技术文章，但不限于技术，也可以是项目经验类的文章和程序员日常。\n<br />2.文章內不得有任何推广信息。包括但不限于公众号、微博、微信，更不得在通过投稿后再修改文章加入推广信息。你可以将这些推广以及个人信息放在个人主页介绍里。\n<br />3.字数极少，段落混乱，大段代码没有放到代码框的文章不收录\n<br />4.不相关的内容不收录，请确认文章内容和本专题相关</p>\n\n<p>目前简书针对优质作者及爱好者，开设了官方程序员微信群，希望加入请发简信给主编小彤花园索取个人微信，主编会将你加入到【简书-程序员】微信群，分享内容，收获知识。添加微信时备注[简书ID]。</p>\n\n<p>微信添加简书大妈（jianshu_dama），进入简书丰富多彩的专题社群！</p>","short_content":"<p>如果你是程序员，或者有一颗喜欢写程序的心，喜欢分享技术干货、项目经验、程序员日常囧事等等，欢迎投稿《程序员》专题。</p>\n\n<p>专题主编：小彤花园 <a href=\"http://www.jianshu.com/users/4a4eb4feee62/\" class=\"blue-link\">http://www.jianshu.com/users/4a4eb4feee62/</a>\n<br />编委：Kulbear</p>\n\n<p>【程序员】专题拒稿指北：<a href=\"http://www.jianshu.com/p/7c8b33b5f63b\" class=\"blue-link\">http://www.jianshu.com/p/7c8b33b5f63b</a></p>\n\n<p>投稿须知：\n<br />1.收录相关技术文章，但不限于技术，也可以是项目经验类的文章和程序员日常。\n<br />2.文章內不得有任何推广信息。包括但不...</p>","subscribers_count":391281}
+</script>
+
+<script type='application/json' data-name='uuid'>
+  {"uuid":"877451d0-7050-403b-9019-8da8be8d3163"}
+</script>
+
+    <script type="application/json" data-name="page-data">{"user_signed_in":false,"locale":"zh-CN","os":"other","read_mode":"day","read_font":"font2"}</script>
+    
+    <script src="//cdn2.jianshu.io/assets/babel-polyfill-2d33bdf1265b1805a404.js"></script>
+    <script src="//cdn2.jianshu.io/assets/web-base-2d33bdf1265b1805a404.js"></script>
+<script src="//cdn2.jianshu.io/assets/web-2d33bdf1265b1805a404.js"></script>
+    
+    <script src="//cdn2.jianshu.io/assets/web/pages/collections/show/entry-2d33bdf1265b1805a404.js"></script>
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-35169517-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+<script>
+  var _hmt = _hmt || [];
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "//hm.baidu.com/hm.js?0c0e9d9b1e7d617b3e6842e85b9fb068";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+  })();
+</script>
+
+<script>
+  (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      }
+      else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+  })();
+</script>
+
+  </body>
+</html>
+,<!DOCTYPE html>
+<!--[if IE 6]><html class="ie lt-ie8"><![endif]-->
+<!--[if IE 7]><html class="ie lt-ie8"><![endif]-->
+<!--[if IE 8]><html class="ie ie8"><![endif]-->
+<!--[if IE 9]><html class="ie ie9"><![endif]-->
+<!--[if !IE]><!--> <html> <!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"1255494d3a","applicationID":"15702971","transactionName":"e1daR0JWVV9RER9UWlRUUVBEUFZdR0xDX1pP","queueTime":3,"applicationTime":393,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1026.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta property="wb:webmaster" content="294ec9de89e7fadb" />
+  <meta property="qc:admins" content="104102651453316562112116375" />
+  <meta property="qc:admins" content="11635613706305617" />
+  <meta property="qc:admins" content="1163561616621163056375" />
+  <meta name="google-site-verification" content="cV4-qkUJZR6gmFeajx_UyPe47GW9vY6cnCrYtCHYNh4" />
+  <meta name="google-site-verification" content="HF7lfF8YEGs1qtCE-kPml8Z469e2RHhGajy6JPVy5XI" />
+  <meta http-equiv="mobile-agent" content="format=html5; url=http://www.jianshu.com/c/NEt52a?order_by=added_at&amp;page=99">
+
+  <!-- Apple -->
+  <meta name="apple-mobile-web-app-title" content="简书">
+
+  
+
+    <title>程序员 - 专题 - 简书</title>
+
+  <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="Pq0swEcwsXG0Uqt83goq1JdS1myTZgVLxTnvkM3dazjswu+U2AupNhjNK+Z5udb8Gm0WAoBo3PmXXlpxvqQL/A==" />
+
+  <link rel="stylesheet" media="all" href="//cdn2.jianshu.io/assets/web-2d33bdf1265b1805a404.css" />
+  
+  <link rel="stylesheet" media="all" href="//cdn2.jianshu.io/assets/web/pages/collections/show/entry-2d33bdf1265b1805a404.css" />
+
+  <link href="//cdn2.jianshu.io/assets/favicons/favicon-783beb88ed621ceab614de960376ac0c.ico" rel="icon">
+      <link rel="apple-touch-icon-precomposed" href="//cdn2.jianshu.io/assets/apple-touch-icons/57-47624b2e2161e8eb144462c85db0a5ff.png" sizes="57x57" />
+      <link rel="apple-touch-icon-precomposed" href="//cdn2.jianshu.io/assets/apple-touch-icons/72-c00cde7cf98fc49e50cbb3ee1dcd5804.png" sizes="72x72" />
+      <link rel="apple-touch-icon-precomposed" href="//cdn2.jianshu.io/assets/apple-touch-icons/76-e8af0bdeaf1ba31e303b1fde8b5e66c4.png" sizes="76x76" />
+      <link rel="apple-touch-icon-precomposed" href="//cdn2.jianshu.io/assets/apple-touch-icons/114-f4c78569bbf1977e8382a5fd90c9237a.png" sizes="114x114" />
+      <link rel="apple-touch-icon-precomposed" href="//cdn2.jianshu.io/assets/apple-touch-icons/120-cf10c3711dba269522743729efe66bbc.png" sizes="120x120" />
+      <link rel="apple-touch-icon-precomposed" href="//cdn2.jianshu.io/assets/apple-touch-icons/152-7bd60457b5f3ecbf1343f0e6241be4f8.png" sizes="152x152" />
+</head>
+
+  <body lang="zh-CN" class="reader-black-font">
+    <!-- 全局顶部导航栏 -->
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="width-limit">
+    <!-- 左上方 Logo -->
+    <a class="logo" href="/"><img src="//cdn2.jianshu.io/assets/web/logo-58fd04f6f0de908401aa561cda6a0688.png" alt="Logo" /></a>
+
+    <!-- 右上角 -->
+      <!-- 未登录显示登录/注册/写文章 -->
+      <a class="btn write-btn" target="_blank" href="/writer#/">
+        <i class="iconfont ic-write"></i>写文章
+</a>      <a class="btn sign-up" href="/sign_up">注册</a>
+      <a class="btn log-in" href="/sign_in">登录</a>
+
+    <!-- 如果用户登录，显示下拉菜单 -->
+
+    <div id="view-mode-ctrl">
+    </div>
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu" aria-expanded="false">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="nav navbar-nav">
+            <li class="">
+              <a href="/">
+                <span class="menu-text">首页</span><i class="iconfont ic-navigation-discover menu-icon"></i>
+</a>            </li>
+            <li class="">
+              <a class="app-download-btn" href="/apps"><span class="menu-text">下载App</span><i class="iconfont ic-navigation-download menu-icon"></i></a>
+            </li>
+          <li class="search">
+            <form target="_blank" action="/search" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
+              <input type="text" name="q" id="q" value="" placeholder="搜索" class="search-input" />
+              <a class="search-btn" href="javascript:void(null)"><i class="iconfont ic-search"></i></a>
+              <!-- <div id="navbar-trending-search"></div> -->
+</form>          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+    
+
+<div class="container collection">
+  <div class="row">
+    <div class="col-xs-24 col-sm-16 main">
+      <!-- 专题头部模块 -->
+      <div class="main-top">
+        <a class="avatar-collection" href="/c/NEt52a">
+          <img src="//upload.jianshu.io/collections/images/16/computer_guy.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/240/h/240" alt="240" />
+</a>        <div class="follow-button" props-data-following="false" props-data-collection-id="16"></div>
+          <a class="btn btn-hollow" href="/sign_in">投稿</a>
+
+        <div class="title">
+          <a class="name" href="/c/NEt52a">程序员</a>
+        </div>
+        <div class="info">
+          收录了50552篇文章 · 391281人关注
+        </div>
+      </div>
+      <ul class="trigger-menu" data-pjax-container="#list-container"><li class=""><a href="/c/NEt52a?order_by=commented_at"><i class="iconfont ic-latestcomments"></i> 最新评论</a></li><li class="active"><a href="/c/NEt52a?order_by=added_at"><i class="iconfont ic-articles"></i> 最新收录</a></li><li class=""><a href="/c/NEt52a?order_by=top"><i class="iconfont ic-hot"></i> 热门</a></li></ul>
+      <div id="list-container">
+        <!-- 文章列表模块 -->
+<ul class="note-list" infinite-scroll-url="/c/NEt52a?order_by=added_at">
+  <li id="note-6665174" data-note-id="6665174" class="">
+  <div class="content">
+    <div class="author">
+      <a class="avatar" target="_blank" href="/u/99b87e047a47">
+        <img src="//upload.jianshu.io/users/upload_avatars/2024535/9670c0122771.png?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96" alt="96" />
+</a>      <div class="name">
+        <a class="blue-link" target="_blank" href="/u/99b87e047a47">CFOX</a>
+        <span class="time" data-shared-at="2016-10-31T13:26:16+08:00"></span>
+      </div>
+    </div>
+    <a class="title" target="_blank" href="/p/09cf27e9a0ab">OrmLite框架 —— OrmLite 框架封装及使用（三）</a>
+    <p class="abstract">
+      OrmLite 三篇文章 OrmLite框架 —— OrmLite 入门使用（一） OrmLite框架 —— OrmLite 复杂条件查询（二） OrmLite框架 —— O...
+    </p>
+    <div class="meta">
+      <a target="_blank" href="/p/09cf27e9a0ab">
+        <i class="iconfont ic-list-read"></i> 224
+</a>        <a target="_blank" href="/p/09cf27e9a0ab#comments">
+          <i class="iconfont ic-list-comments"></i> 0
+</a>      <span><i class="iconfont ic-list-like"></i> 2</span>
+    </div>
+  </div>
+</li>
+<li id="note-12632494" data-note-id="12632494" class="have-img">
+    <a class="wrap-img" href="/p/0a8033bfdc20" target="_blank">
+      <img data-echo="//upload-images.jianshu.io/upload_images/2908091-7c7aa2994f5597aa.png?imageMogr2/auto-orient/strip|imageView2/1/w/375/h/300" class="img-blur" src="//upload-images.jianshu.io/upload_images/2908091-7c7aa2994f5597aa.png?imageMogr2/auto-orient/strip|imageView2/1/w/150/h/120" alt="120" />
+    </a>
+  <div class="content">
+    <div class="author">
+      <a class="avatar" target="_blank" href="/u/d858d0fd1d81">
+        <img src="//upload.jianshu.io/users/upload_avatars/2908091/6833f42d2e8e.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96" alt="96" />
+</a>      <div class="name">
+        <a class="blue-link" target="_blank" href="/u/d858d0fd1d81">计划生育老头头</a>
+        <span class="time" data-shared-at="2017-05-21T12:37:20+08:00"></span>
+      </div>
+    </div>
+    <a class="title" target="_blank" href="/p/0a8033bfdc20">爬取维基百科词条</a>
+    <p class="abstract">
+      python爬取维基百科词条，获得某词汇页面中释义段落的加粗词汇、链接词汇以及所爬词汇对应的分类，为自动构建同义词汇树准备数据。以下代码可能为一次性代码，因为解析html靠的...
+    </p>
+    <div class="meta">
+      <a target="_blank" href="/p/0a8033bfdc20">
+        <i class="iconfont ic-list-read"></i> 11
+</a>        <a target="_blank" href="/p/0a8033bfdc20#comments">
+          <i class="iconfont ic-list-comments"></i> 0
+</a>      <span><i class="iconfont ic-list-like"></i> 0</span>
+    </div>
+  </div>
+</li>
+<li id="note-12631019" data-note-id="12631019" class="have-img">
+    <a class="wrap-img" href="/p/0140e00f08c9" target="_blank">
+      <img data-echo="//upload-images.jianshu.io/upload_images/5950465-c2a8569904c50a21.png?imageMogr2/auto-orient/strip|imageView2/1/w/375/h/300" class="img-blur" src="//upload-images.jianshu.io/upload_images/5950465-c2a8569904c50a21.png?imageMogr2/auto-orient/strip|imageView2/1/w/150/h/120" alt="120" />
+    </a>
+  <div class="content">
+    <div class="author">
+      <a class="avatar" target="_blank" href="/u/81162397345d">
+        <img src="//cdn2.jianshu.io/assets/default_avatar/2-9636b13945b9ccf345bc98d0d81074eb.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96" alt="96" />
+</a>      <div class="name">
+        <a class="blue-link" target="_blank" href="/u/81162397345d">都是毛线</a>
+        <span class="time" data-shared-at="2017-05-21T15:00:00+08:00"></span>
+      </div>
+    </div>
+    <a class="title" target="_blank" href="/p/0140e00f08c9">(MAC)JAVA开发环境搭建(一)-jdk</a>
+    <p class="abstract">
+      用到的工具有 jdk、apache tomcat、IntelliJ IDEA、Navicat Premium 本文介绍 jdk安装 jdk 打开命令行工具 输入java 查看...
+    </p>
+    <div class="meta">
+      <a target="_blank" href="/p/0140e00f08c9">
+        <i class="iconfont ic-list-read"></i> 30
+</a>        <a target="_blank" href="/p/0140e00f08c9#comments">
+          <i class="iconfont ic-list-comments"></i> 0
+</a>      <span><i class="iconfont ic-list-like"></i> 2</span>
+    </div>
+  </div>
+</li>
+<li id="note-12636858" data-note-id="12636858" class="have-img">
+    <a class="wrap-img" href="/p/e0090fb8d148" target="_blank">
+      <img data-echo="//upload-images.jianshu.io/upload_images/79702-8678181659ea8825.png?imageMogr2/auto-orient/strip|imageView2/1/w/375/h/300" class="img-blur" src="//upload-images.jianshu.io/upload_images/79702-8678181659ea8825.png?imageMogr2/auto-orient/strip|imageView2/1/w/150/h/120" alt="120" />
+    </a>
+  <div class="content">
+    <div class="author">
+      <a class="avatar" target="_blank" href="/u/843d2366f95b">
+        <img src="//upload.jianshu.io/users/upload_avatars/79702/473910f8aeec.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96" alt="96" />
+</a>      <div class="name">
+        <a class="blue-link" target="_blank" href="/u/843d2366f95b">JC_Huang</a>
+        <span class="time" data-shared-at="2017-05-21T15:08:51+08:00"></span>
+      </div>
+    </div>
+    <a class="title" target="_blank" href="/p/e0090fb8d148">谈谈像素以及微信小程序的 rpx无标题文章</a>
+    <p class="abstract">
+      欢迎来我的博客阅读：「谈谈像素以及微信小程序的 rpx」 前言 最近在负责有赞的某个业务的微信小程序开发，这是我第一次着手微信小程序的开发，这个过程中发现微信小程序所定义的一...
+    </p>
+    <div class="meta">
+      <a target="_blank" href="/p/e0090fb8d148">
+        <i class="iconfont ic-list-read"></i> 22
+</a>        <a target="_blank" href="/p/e0090fb8d148#comments">
+          <i class="iconfont ic-list-comments"></i> 0
+</a>      <span><i class="iconfont ic-list-like"></i> 1</span>
+    </div>
+  </div>
+</li>
+<li id="note-9887795" data-note-id="9887795" class="have-img">
+    <a class="wrap-img" href="/p/5fb81fabbe4a" target="_blank">
+      <img data-echo="//upload-images.jianshu.io/upload_images/79702-097ba6a11cc5b0ae.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/375/h/300" class="img-blur" src="//upload-images.jianshu.io/upload_images/79702-097ba6a11cc5b0ae.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/150/h/120" alt="120" />
+    </a>
+  <div class="content">
+    <div class="author">
+      <a class="avatar" target="_blank" href="/u/843d2366f95b">
+        <img src="//upload.jianshu.io/users/upload_avatars/79702/473910f8aeec.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96" alt="96" />
+</a>      <div class="name">
+        <a class="blue-link" target="_blank" href="/u/843d2366f95b">JC_Huang</a>
+        <span class="time" data-shared-at="2017-03-07T15:17:22+08:00"></span>
+      </div>
+    </div>
+    <a class="title" target="_blank" href="/p/5fb81fabbe4a">一款 NodeJS 轻量级内存监控工具</a>
+    <p class="abstract">
+      Memeye Github 链接：https://github.com/JerryC8080/Memeye Memeye 是一个轻量级的 NodeJS 进程监控工具，它提供 ...
+    </p>
+    <div class="meta">
+      <a target="_blank" href="/p/5fb81fabbe4a">
+        <i class="iconfont ic-list-read"></i> 277
+</a>        <a target="_blank" href="/p/5fb81fabbe4a#comments">
+          <i class="iconfont ic-list-comments"></i> 1
+</a>      <span><i class="iconfont ic-list-like"></i> 15</span>
+    </div>
+  </div>
+</li>
+<li id="note-9705610" data-note-id="9705610" class="have-img">
+    <a class="wrap-img" href="/p/00348018ce6c" target="_blank">
+      <img data-echo="//upload-images.jianshu.io/upload_images/79702-6b649da4038c51aa.png?imageMogr2/auto-orient/strip|imageView2/1/w/375/h/300" class="img-blur" src="//upload-images.jianshu.io/upload_images/79702-6b649da4038c51aa.png?imageMogr2/auto-orient/strip|imageView2/1/w/150/h/120" alt="120" />
+    </a>
+  <div class="content">
+    <div class="author">
+      <a class="avatar" target="_blank" href="/u/843d2366f95b">
+        <img src="//upload.jianshu.io/users/upload_avatars/79702/473910f8aeec.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96" alt="96" />
+</a>      <div class="name">
+        <a class="blue-link" target="_blank" href="/u/843d2366f95b">JC_Huang</a>
+        <span class="time" data-shared-at="2017-03-02T16:00:06+08:00"></span>
+      </div>
+    </div>
+    <a class="title" target="_blank" href="/p/00348018ce6c">理解 UDP</a>
+    <p class="abstract">
+      更好阅读体验：《理解 TCP 和 UDP》— By Gitbook UDP 和 TCP 的不同 TCP 在传送数据之前必须先建立连接，数据传送结束后要释放连接。TCP 不提供...
+    </p>
+    <div class="meta">
+      <a target="_blank" href="/p/00348018ce6c">
+        <i class="iconfont ic-list-read"></i> 48
+</a>        <a target="_blank" href="/p/00348018ce6c#comments">
+          <i class="iconfont ic-list-comments"></i> 0
+</a>      <span><i class="iconfont ic-list-like"></i> 1</span>
+    </div>
+  </div>
+</li>
+<li id="note-9705596" data-note-id="9705596" class="">
+  <div class="content">
+    <div class="author">
+      <a class="avatar" target="_blank" href="/u/843d2366f95b">
+        <img src="//upload.jianshu.io/users/upload_avatars/79702/473910f8aeec.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96" alt="96" />
+</a>      <div class="name">
+        <a class="blue-link" target="_blank" href="/u/843d2366f95b">JC_Huang</a>
+        <span class="time" data-shared-at="2017-03-02T15:59:38+08:00"></span>
+      </div>
+    </div>
+    <a class="title" target="_blank" href="/p/3414cff93dc3">理解 TCP （六）：网络编程接口</a>
+    <p class="abstract">
+      更好阅读体验：《理解 TCP 和 UDP》— By Gitbook 一切皆 Socket 我们已经知道网络中的进程是通过 socket 来通信的，那什么是 socket 呢？...
+    </p>
+    <div class="meta">
+      <a target="_blank" href="/p/3414cff93dc3">
+        <i class="iconfont ic-list-read"></i> 32
+</a>        <a target="_blank" href="/p/3414cff93dc3#comments">
+          <i class="iconfont ic-list-comments"></i> 1
+</a>      <span><i class="iconfont ic-list-like"></i> 1</span>
+    </div>
+  </div>
+</li>
+<li id="note-9705554" data-note-id="9705554" class="have-img">
+    <a class="wrap-img" href="/p/4fbb48c4285d" target="_blank">
+      <img data-echo="//upload-images.jianshu.io/upload_images/79702-6f5e4bf75a40374b.png?imageMogr2/auto-orient/strip|imageView2/1/w/375/h/300" class="img-blur" src="//upload-images.jianshu.io/upload_images/79702-6f5e4bf75a40374b.png?imageMogr2/auto-orient/strip|imageView2/1/w/150/h/120" alt="120" />
+    </a>
+  <div class="content">
+    <div class="author">
+      <a class="avatar" target="_blank" href="/u/843d2366f95b">
+        <img src="//upload.jianshu.io/users/upload_avatars/79702/473910f8aeec.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96" alt="96" />
+</a>      <div class="name">
+        <a class="blue-link" target="_blank" href="/u/843d2366f95b">JC_Huang</a>
+        <span class="time" data-shared-at="2017-03-02T15:59:23+08:00"></span>
+      </div>
+    </div>
+    <a class="title" target="_blank" href="/p/4fbb48c4285d">理解 TCP（五）：可靠性交付的实现</a>
+    <p class="abstract">
+      更好阅读体验：《理解 TCP 和 UDP》— By Gitbook TCP 是一种提供可靠性交付的协议。也就是说，通过 TCP 连接传输的数据，无差错、不丢失、不重复、并且按...
+    </p>
+    <div class="meta">
+      <a target="_blank" href="/p/4fbb48c4285d">
+        <i class="iconfont ic-list-read"></i> 47
+</a>        <a target="_blank" href="/p/4fbb48c4285d#comments">
+          <i class="iconfont ic-list-comments"></i> 0
+</a>      <span><i class="iconfont ic-list-like"></i> 1</span>
+    </div>
+  </div>
+</li>
+<li id="note-9705547" data-note-id="9705547" class="">
+  <div class="content">
+    <div class="author">
+      <a class="avatar" target="_blank" href="/u/843d2366f95b">
+        <img src="//upload.jianshu.io/users/upload_avatars/79702/473910f8aeec.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96" alt="96" />
+</a>      <div class="name">
+        <a class="blue-link" target="_blank" href="/u/843d2366f95b">JC_Huang</a>
+        <span class="time" data-shared-at="2017-03-02T15:58:18+08:00"></span>
+      </div>
+    </div>
+    <a class="title" target="_blank" href="/p/7b9235a2c5f0">理解 TCP（四）：状态流转</a>
+    <p class="abstract">
+      更好阅读体验：《理解 TCP 和 UDP》— By Gitbook 无论客户端还是服务器，在双方 TCP 通讯的过程中，都会有着一个「状态」的概念，状态会随着 TCP 通讯的...
+    </p>
+    <div class="meta">
+      <a target="_blank" href="/p/7b9235a2c5f0">
+        <i class="iconfont ic-list-read"></i> 25
+</a>        <a target="_blank" href="/p/7b9235a2c5f0#comments">
+          <i class="iconfont ic-list-comments"></i> 0
+</a>      <span><i class="iconfont ic-list-like"></i> 0</span>
+    </div>
+  </div>
+</li>
+<li id="note-9705514" data-note-id="9705514" class="have-img">
+    <a class="wrap-img" href="/p/e4f05fdea83b" target="_blank">
+      <img data-echo="//upload-images.jianshu.io/upload_images/79702-254b9c94b61587c2.png?imageMogr2/auto-orient/strip|imageView2/1/w/375/h/300" class="img-blur" src="//upload-images.jianshu.io/upload_images/79702-254b9c94b61587c2.png?imageMogr2/auto-orient/strip|imageView2/1/w/150/h/120" alt="120" />
+    </a>
+  <div class="content">
+    <div class="author">
+      <a class="avatar" target="_blank" href="/u/843d2366f95b">
+        <img src="//upload.jianshu.io/users/upload_avatars/79702/473910f8aeec.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96" alt="96" />
+</a>      <div class="name">
+        <a class="blue-link" target="_blank" href="/u/843d2366f95b">JC_Huang</a>
+        <span class="time" data-shared-at="2017-03-02T15:57:54+08:00"></span>
+      </div>
+    </div>
+    <a class="title" target="_blank" href="/p/e4f05fdea83b">理解 TCP（三）：连接的建立和释放</a>
+    <p class="abstract">
+      更好阅读体验：《理解 TCP 和 UDP》— By Gitbook TCP 的整个交流过程可以总结为：先建立连接，然后传输数据，最后释放链接。 三次握手，建立连接 TCP 连...
+    </p>
+    <div class="meta">
+      <a target="_blank" href="/p/e4f05fdea83b">
+        <i class="iconfont ic-list-read"></i> 25
+</a>        <a target="_blank" href="/p/e4f05fdea83b#comments">
+          <i class="iconfont ic-list-comments"></i> 0
+</a>      <span><i class="iconfont ic-list-like"></i> 1</span>
+    </div>
+  </div>
+</li>
+
+</ul>
+
+      </div>
+    </div>
+    <div class="col-xs-24 col-sm-7 col-sm-offset-1 aside">
+        <p class="title">专题公告</p>
+        <div class="description js-description">
+          <p>如果你是程序员，或者有一颗喜欢写程序的心，喜欢分享技术干货、项目经验、程序员日常囧事等等，欢迎投稿《程序员》专题。</p>
+
+<p>专题主编：小彤花园 <a href="http://www.jianshu.com/users/4a4eb4feee62/">http://www.jianshu.com/users/4a4eb4feee62/</a>
+<br />编委：Kulbear</p>
+
+<p>【程序员】专题拒稿指北：<a href="http://www.jianshu.com/p/7c8b33b5f63b">http://www.jianshu.com/p/7c8b33b5f63b</a></p>
+
+<p>投稿须知：
+<br />1.收录相关技术文章，但不限于技术，也可以是项目经验类的文章和程序员日常。
+<br />2.文章內不得有任何推广信息。包括但不...</p>
+          <a data-action="toggle-description" class="open" href="javascript:void(null);">展开描述 <i class="iconfont ic-show"></i></a>
+        </div>
+      <div class="share">
+        <span>分享至</span>
+        <a href="javascript:void((function(s,d,e,r,l,p,t,z,c){var%20f=&#39;http://v.t.sina.com.cn/share/share.php?appkey=1881139527&#39;,u=z||d.location,p=[&#39;&amp;url=&#39;,e(u),&#39;&amp;title=&#39;,e(t||d.title),&#39;&amp;source=&#39;,e(r),&#39;&amp;sourceUrl=&#39;,e(l),&#39;&amp;content=&#39;,c||&#39;gb2312&#39;,&#39;&amp;pic=&#39;,e(p||&#39;&#39;)].join(&#39;&#39;);function%20a(){if(!window.open([f,p].join(&#39;&#39;),&#39;mb&#39;,[&#39;toolbar=0,status=0,resizable=1,width=440,height=430,left=&#39;,(s.width-440)/2,&#39;,top=&#39;,(s.height-430)/2].join(&#39;&#39;)))u.href=[f,p].join(&#39;&#39;);};if(/Firefox/.test(navigator.userAgent))setTimeout(a,0);else%20a();})(screen,document,encodeURIComponent,&#39;&#39;,&#39;&#39;,&#39;http://upload.jianshu.io/collections/images/16/computer_guy.jpg&#39;, &#39;推荐专题《程序员》（ 分享自 @简书 ）&#39;,&#39;http://www.jianshu.com/c/NEt52a?utm_campaign=maleskine&amp;utm_content=collection&amp;utm_medium=reader_share&amp;utm_source=weibo&#39;,&#39;页面编码gb2312|utf-8默认gb2312&#39;));"><i class="iconfont ic-share-weibo"></i></a>
+        <a data-action="weixin-share"><i class="iconfont ic-share-wechat"></i></a>
+        <a class="" href=""><i class="iconfont ic-share-more"></i></a>
+      </div>
+      <div class="editors-and-subscribers-container"></div>
+    </div>
+  </div>
+</div>
+<div data-vcomp="side-tool"></div>
+
+<script type="application/json" data-name="collection">
+  {"id":16,"slug":"NEt52a","owner":{"id":259},"content":"<p>如果你是程序员，或者有一颗喜欢写程序的心，喜欢分享技术干货、项目经验、程序员日常囧事等等，欢迎投稿《程序员》专题。</p>\n\n<p>专题主编：小彤花园 <a href=\"http://www.jianshu.com/users/4a4eb4feee62/\" class=\"blue-link\">http://www.jianshu.com/users/4a4eb4feee62/</a>\n<br />编委：Kulbear</p>\n\n<p>【程序员】专题拒稿指北：<a href=\"http://www.jianshu.com/p/7c8b33b5f63b\" class=\"blue-link\">http://www.jianshu.com/p/7c8b33b5f63b</a></p>\n\n<p>投稿须知：\n<br />1.收录相关技术文章，但不限于技术，也可以是项目经验类的文章和程序员日常。\n<br />2.文章內不得有任何推广信息。包括但不限于公众号、微博、微信，更不得在通过投稿后再修改文章加入推广信息。你可以将这些推广以及个人信息放在个人主页介绍里。\n<br />3.字数极少，段落混乱，大段代码没有放到代码框的文章不收录\n<br />4.不相关的内容不收录，请确认文章内容和本专题相关</p>\n\n<p>目前简书针对优质作者及爱好者，开设了官方程序员微信群，希望加入请发简信给主编小彤花园索取个人微信，主编会将你加入到【简书-程序员】微信群，分享内容，收获知识。添加微信时备注[简书ID]。</p>\n\n<p>微信添加简书大妈（jianshu_dama），进入简书丰富多彩的专题社群！</p>","short_content":"<p>如果你是程序员，或者有一颗喜欢写程序的心，喜欢分享技术干货、项目经验、程序员日常囧事等等，欢迎投稿《程序员》专题。</p>\n\n<p>专题主编：小彤花园 <a href=\"http://www.jianshu.com/users/4a4eb4feee62/\" class=\"blue-link\">http://www.jianshu.com/users/4a4eb4feee62/</a>\n<br />编委：Kulbear</p>\n\n<p>【程序员】专题拒稿指北：<a href=\"http://www.jianshu.com/p/7c8b33b5f63b\" class=\"blue-link\">http://www.jianshu.com/p/7c8b33b5f63b</a></p>\n\n<p>投稿须知：\n<br />1.收录相关技术文章，但不限于技术，也可以是项目经验类的文章和程序员日常。\n<br />2.文章內不得有任何推广信息。包括但不...</p>","subscribers_count":391281}
+</script>
+
+<script type='application/json' data-name='uuid'>
+  {"uuid":"fbfdf048-bef0-4b4e-89d1-8ef10193a29b"}
+</script>
+
+    <script type="application/json" data-name="page-data">{"user_signed_in":false,"locale":"zh-CN","os":"other","read_mode":"day","read_font":"font2"}</script>
+    
+    <script src="//cdn2.jianshu.io/assets/babel-polyfill-2d33bdf1265b1805a404.js"></script>
+    <script src="//cdn2.jianshu.io/assets/web-base-2d33bdf1265b1805a404.js"></script>
+<script src="//cdn2.jianshu.io/assets/web-2d33bdf1265b1805a404.js"></script>
+    
+    <script src="//cdn2.jianshu.io/assets/web/pages/collections/show/entry-2d33bdf1265b1805a404.js"></script>
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-35169517-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+<script>
+  var _hmt = _hmt || [];
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "//hm.baidu.com/hm.js?0c0e9d9b1e7d617b3e6842e85b9fb068";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+  })();
+</script>
+
+<script>
+  (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      }
+      else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+  })();
+</script>
+
+  </body>
+</html>
+,<!DOCTYPE html>
+<!--[if IE 6]><html class="ie lt-ie8"><![endif]-->
+<!--[if IE 7]><html class="ie lt-ie8"><![endif]-->
+<!--[if IE 8]><html class="ie ie8"><![endif]-->
+<!--[if IE 9]><html class="ie ie9"><![endif]-->
+<!--[if !IE]><!--> <html> <!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"1255494d3a","applicationID":"15702971","transactionName":"e1daR0JWVV9RER9UWlRUUVBEUFZdR0xDX1pP","queueTime":87,"applicationTime":423,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1026.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta property="wb:webmaster" content="294ec9de89e7fadb" />
+  <meta property="qc:admins" content="104102651453316562112116375" />
+  <meta property="qc:admins" content="11635613706305617" />
+  <meta property="qc:admins" content="1163561616621163056375" />
+  <meta name="google-site-verification" content="cV4-qkUJZR6gmFeajx_UyPe47GW9vY6cnCrYtCHYNh4" />
+  <meta name="google-site-verification" content="HF7lfF8YEGs1qtCE-kPml8Z469e2RHhGajy6JPVy5XI" />
+  <meta http-equiv="mobile-agent" content="format=html5; url=http://www.jianshu.com/c/NEt52a?order_by=added_at&amp;page=100">
+
+  <!-- Apple -->
+  <meta name="apple-mobile-web-app-title" content="简书">
+
+  
+
+    <title>程序员 - 专题 - 简书</title>
+
+  <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="4Yj5KXq+1TqxmviXx4vOZpGYixUDPxcg9qcXXZrLBE8fv5L84Q9E710nMUXhB20kPME3Nvp9ISL1a6EP9fa+rg==" />
+
+  <link rel="stylesheet" media="all" href="//cdn2.jianshu.io/assets/web-2d33bdf1265b1805a404.css" />
+  
+  <link rel="stylesheet" media="all" href="//cdn2.jianshu.io/assets/web/pages/collections/show/entry-2d33bdf1265b1805a404.css" />
+
+  <link href="//cdn2.jianshu.io/assets/favicons/favicon-783beb88ed621ceab614de960376ac0c.ico" rel="icon">
+      <link rel="apple-touch-icon-precomposed" href="//cdn2.jianshu.io/assets/apple-touch-icons/57-47624b2e2161e8eb144462c85db0a5ff.png" sizes="57x57" />
+      <link rel="apple-touch-icon-precomposed" href="//cdn2.jianshu.io/assets/apple-touch-icons/72-c00cde7cf98fc49e50cbb3ee1dcd5804.png" sizes="72x72" />
+      <link rel="apple-touch-icon-precomposed" href="//cdn2.jianshu.io/assets/apple-touch-icons/76-e8af0bdeaf1ba31e303b1fde8b5e66c4.png" sizes="76x76" />
+      <link rel="apple-touch-icon-precomposed" href="//cdn2.jianshu.io/assets/apple-touch-icons/114-f4c78569bbf1977e8382a5fd90c9237a.png" sizes="114x114" />
+      <link rel="apple-touch-icon-precomposed" href="//cdn2.jianshu.io/assets/apple-touch-icons/120-cf10c3711dba269522743729efe66bbc.png" sizes="120x120" />
+      <link rel="apple-touch-icon-precomposed" href="//cdn2.jianshu.io/assets/apple-touch-icons/152-7bd60457b5f3ecbf1343f0e6241be4f8.png" sizes="152x152" />
+</head>
+
+  <body lang="zh-CN" class="reader-black-font">
+    <!-- 全局顶部导航栏 -->
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="width-limit">
+    <!-- 左上方 Logo -->
+    <a class="logo" href="/"><img src="//cdn2.jianshu.io/assets/web/logo-58fd04f6f0de908401aa561cda6a0688.png" alt="Logo" /></a>
+
+    <!-- 右上角 -->
+      <!-- 未登录显示登录/注册/写文章 -->
+      <a class="btn write-btn" target="_blank" href="/writer#/">
+        <i class="iconfont ic-write"></i>写文章
+</a>      <a class="btn sign-up" href="/sign_up">注册</a>
+      <a class="btn log-in" href="/sign_in">登录</a>
+
+    <!-- 如果用户登录，显示下拉菜单 -->
+
+    <div id="view-mode-ctrl">
+    </div>
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu" aria-expanded="false">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="nav navbar-nav">
+            <li class="">
+              <a href="/">
+                <span class="menu-text">首页</span><i class="iconfont ic-navigation-discover menu-icon"></i>
+</a>            </li>
+            <li class="">
+              <a class="app-download-btn" href="/apps"><span class="menu-text">下载App</span><i class="iconfont ic-navigation-download menu-icon"></i></a>
+            </li>
+          <li class="search">
+            <form target="_blank" action="/search" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
+              <input type="text" name="q" id="q" value="" placeholder="搜索" class="search-input" />
+              <a class="search-btn" href="javascript:void(null)"><i class="iconfont ic-search"></i></a>
+              <!-- <div id="navbar-trending-search"></div> -->
+</form>          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+    
+
+<div class="container collection">
+  <div class="row">
+    <div class="col-xs-24 col-sm-16 main">
+      <!-- 专题头部模块 -->
+      <div class="main-top">
+        <a class="avatar-collection" href="/c/NEt52a">
+          <img src="//upload.jianshu.io/collections/images/16/computer_guy.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/240/h/240" alt="240" />
+</a>        <div class="follow-button" props-data-following="false" props-data-collection-id="16"></div>
+          <a class="btn btn-hollow" href="/sign_in">投稿</a>
+
+        <div class="title">
+          <a class="name" href="/c/NEt52a">程序员</a>
+        </div>
+        <div class="info">
+          收录了50552篇文章 · 391281人关注
+        </div>
+      </div>
+      <ul class="trigger-menu" data-pjax-container="#list-container"><li class=""><a href="/c/NEt52a?order_by=commented_at"><i class="iconfont ic-latestcomments"></i> 最新评论</a></li><li class="active"><a href="/c/NEt52a?order_by=added_at"><i class="iconfont ic-articles"></i> 最新收录</a></li><li class=""><a href="/c/NEt52a?order_by=top"><i class="iconfont ic-hot"></i> 热门</a></li></ul>
+      <div id="list-container">
+        <!-- 文章列表模块 -->
+<ul class="note-list" infinite-scroll-url="/c/NEt52a?order_by=added_at">
+  <li id="note-9705504" data-note-id="9705504" class="">
+  <div class="content">
+    <div class="author">
+      <a class="avatar" target="_blank" href="/u/843d2366f95b">
+        <img src="//upload.jianshu.io/users/upload_avatars/79702/473910f8aeec.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96" alt="96" />
+</a>      <div class="name">
+        <a class="blue-link" target="_blank" href="/u/843d2366f95b">JC_Huang</a>
+        <span class="time" data-shared-at="2017-03-02T15:57:13+08:00"></span>
+      </div>
+    </div>
+    <a class="title" target="_blank" href="/p/421dd948a42a">理解 TCP（二）：报文结构</a>
+    <p class="abstract">
+      更好阅读体验：《理解 TCP 和 UDP》— By Gitbook TCP 是面向字节流的，但传送的数据单元却是报文段。 什么是报文？例如一个 100kb 的 HTML 文档...
+    </p>
+    <div class="meta">
+      <a target="_blank" href="/p/421dd948a42a">
+        <i class="iconfont ic-list-read"></i> 41
+</a>        <a target="_blank" href="/p/421dd948a42a#comments">
+          <i class="iconfont ic-list-comments"></i> 0
+</a>      <span><i class="iconfont ic-list-like"></i> 1</span>
+    </div>
+  </div>
+</li>
+<li id="note-9705487" data-note-id="9705487" class="">
+  <div class="content">
+    <div class="author">
+      <a class="avatar" target="_blank" href="/u/843d2366f95b">
+        <img src="//upload.jianshu.io/users/upload_avatars/79702/473910f8aeec.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96" alt="96" />
+</a>      <div class="name">
+        <a class="blue-link" target="_blank" href="/u/843d2366f95b">JC_Huang</a>
+        <span class="time" data-shared-at="2017-03-02T15:56:40+08:00"></span>
+      </div>
+    </div>
+    <a class="title" target="_blank" href="/p/05fa0459cdda">理解 TCP（一）：端口</a>
+    <p class="abstract">
+      更好阅读体验：《理解 TCP 和 UDP》— By Gitbook 端口与进程 TCP 的包是不包含 IP 地址信息的，那是 IP 层上的事，但是有源端口和目的端口。就是说，...
+    </p>
+    <div class="meta">
+      <a target="_blank" href="/p/05fa0459cdda">
+        <i class="iconfont ic-list-read"></i> 55
+</a>        <a target="_blank" href="/p/05fa0459cdda#comments">
+          <i class="iconfont ic-list-comments"></i> 2
+</a>      <span><i class="iconfont ic-list-like"></i> 0</span>
+    </div>
+  </div>
+</li>
+<li id="note-12636962" data-note-id="12636962" class="have-img">
+    <a class="wrap-img" href="/p/0e53086a3ea5" target="_blank">
+      <img data-echo="//upload-images.jianshu.io/upload_images/5633817-21a01c16820a978a.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/375/h/300" class="img-blur" src="//upload-images.jianshu.io/upload_images/5633817-21a01c16820a978a.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/150/h/120" alt="120" />
+    </a>
+  <div class="content">
+    <div class="author">
+      <a class="avatar" target="_blank" href="/u/0e5051f2790d">
+        <img src="//cdn2.jianshu.io/assets/default_avatar/8-a356878e44b45ab268a3b0bbaaadeeb7.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96" alt="96" />
+</a>      <div class="name">
+        <a class="blue-link" target="_blank" href="/u/0e5051f2790d">静熙老师哈哈哈</a>
+        <span class="time" data-shared-at="2017-05-21T15:14:14+08:00"></span>
+      </div>
+    </div>
+    <a class="title" target="_blank" href="/p/0e53086a3ea5">C语言解析:马里奥碰到花朵就变身</a>
+    <p class="abstract">
+      什么是马里奥？一个装着 16 × 32 个小色块的长方形，其中一些色块填着颜色，另一些没有。什么是花？一个 16 × 16 的正方形。什么是「变身」？把马里奥这个方块里面代表...
+    </p>
+    <div class="meta">
+      <a target="_blank" href="/p/0e53086a3ea5">
+        <i class="iconfont ic-list-read"></i> 69
+</a>        <a target="_blank" href="/p/0e53086a3ea5#comments">
+          <i class="iconfont ic-list-comments"></i> 0
+</a>      <span><i class="iconfont ic-list-like"></i> 3</span>
+    </div>
+  </div>
+</li>
+<li id="note-12618383" data-note-id="12618383" class="have-img">
+    <a class="wrap-img" href="/p/2876bfe92df4" target="_blank">
+      <img data-echo="//upload-images.jianshu.io/upload_images/3738156-1c2801cb682d2c8d.png?imageMogr2/auto-orient/strip|imageView2/1/w/375/h/300" class="img-blur" src="//upload-images.jianshu.io/upload_images/3738156-1c2801cb682d2c8d.png?imageMogr2/auto-orient/strip|imageView2/1/w/150/h/120" alt="120" />
+    </a>
+  <div class="content">
+    <div class="author">
+      <a class="avatar" target="_blank" href="/u/6c40959de210">
+        <img src="//upload.jianshu.io/users/upload_avatars/3738156/29e84cd3-f994-4dbb-b6a5-9523c32a20d4.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96" alt="96" />
+</a>      <div class="name">
+        <a class="blue-link" target="_blank" href="/u/6c40959de210">STzen</a>
+        <span class="time" data-shared-at="2017-05-21T15:17:48+08:00"></span>
+      </div>
+    </div>
+    <a class="title" target="_blank" href="/p/2876bfe92df4">ios - 用UICollectionView实现瀑布流详解</a>
+    <p class="abstract">
+      UICollectionView简介 关于UICollectionView，苹果是这样解释的：管理数据项的有序集合，并使用可定制的布局呈现它们。在iOS中最简单的UIColl...
+    </p>
+    <div class="meta">
+      <a target="_blank" href="/p/2876bfe92df4">
+        <i class="iconfont ic-list-read"></i> 50
+</a>        <a target="_blank" href="/p/2876bfe92df4#comments">
+          <i class="iconfont ic-list-comments"></i> 0
+</a>      <span><i class="iconfont ic-list-like"></i> 6</span>
+    </div>
+  </div>
+</li>
+<li id="note-12637203" data-note-id="12637203" class="have-img">
+    <a class="wrap-img" href="/p/acf8c55533f1" target="_blank">
+      <img data-echo="//upload-images.jianshu.io/upload_images/2702499-43740c842f3491c7.png?imageMogr2/auto-orient/strip|imageView2/1/w/375/h/300" class="img-blur" src="//upload-images.jianshu.io/upload_images/2702499-43740c842f3491c7.png?imageMogr2/auto-orient/strip|imageView2/1/w/150/h/120" alt="120" />
+    </a>
+  <div class="content">
+    <div class="author">
+      <a class="avatar" target="_blank" href="/u/64342ecdb0ae">
+        <img src="//upload.jianshu.io/users/upload_avatars/2702499/5df8f8b510fe.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96" alt="96" />
+</a>      <div class="name">
+        <a class="blue-link" target="_blank" href="/u/64342ecdb0ae">_番茄沙司</a>
+        <span class="time" data-shared-at="2017-05-21T15:22:35+08:00"></span>
+      </div>
+    </div>
+    <a class="title" target="_blank" href="/p/acf8c55533f1">Android官方架构组件介绍之LifeCycle</a>
+    <p class="abstract">
+      Google 2017 I/O开发者大会于近日召开，在开发者大会上谷歌除了发布了Android O等一些新产品之外，也对Android代码的架构做出了一个官方的回应。 Goo...
+    </p>
+    <div class="meta">
+      <a target="_blank" href="/p/acf8c55533f1">
+        <i class="iconfont ic-list-read"></i> 237
+</a>        <a target="_blank" href="/p/acf8c55533f1#comments">
+          <i class="iconfont ic-list-comments"></i> 3
+</a>      <span><i class="iconfont ic-list-like"></i> 21</span>
+    </div>
+  </div>
+</li>
+<li id="note-12637254" data-note-id="12637254" class="">
+  <div class="content">
+    <div class="author">
+      <a class="avatar" target="_blank" href="/u/64342ecdb0ae">
+        <img src="//upload.jianshu.io/users/upload_avatars/2702499/5df8f8b510fe.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96" alt="96" />
+</a>      <div class="name">
+        <a class="blue-link" target="_blank" href="/u/64342ecdb0ae">_番茄沙司</a>
+        <span class="time" data-shared-at="2017-05-21T15:24:15+08:00"></span>
+      </div>
+    </div>
+    <a class="title" target="_blank" href="/p/4b7945475a6f">Android官方架构组件介绍之LiveData</a>
+    <p class="abstract">
+      LiveData LiveData是一个用于持有数据并支持数据可被监听（观察）。和传统的观察者模式中的被观察者不一样，LiveData是一个生命周期感知组件，因此观察者可以指...
+    </p>
+    <div class="meta">
+      <a target="_blank" href="/p/4b7945475a6f">
+        <i class="iconfont ic-list-read"></i> 110
+</a>        <a target="_blank" href="/p/4b7945475a6f#comments">
+          <i class="iconfont ic-list-comments"></i> 0
+</a>      <span><i class="iconfont ic-list-like"></i> 11</span>
+    </div>
+  </div>
+</li>
+<li id="note-12617836" data-note-id="12617836" class="have-img">
+    <a class="wrap-img" href="/p/9492e39ca71d" target="_blank">
+      <img data-echo="//upload-images.jianshu.io/upload_images/1933644-7b4d492d2729c301.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/375/h/300" class="img-blur" src="//upload-images.jianshu.io/upload_images/1933644-7b4d492d2729c301.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/150/h/120" alt="120" />
+    </a>
+  <div class="content">
+    <div class="author">
+      <a class="avatar" target="_blank" href="/u/fb761ef71e45">
+        <img src="//upload.jianshu.io/users/upload_avatars/1933644/189108a86cae.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96" alt="96" />
+</a>      <div class="name">
+        <a class="blue-link" target="_blank" href="/u/fb761ef71e45">解牛_冯雅杰</a>
+        <span class="time" data-shared-at="2017-05-21T18:26:57+08:00"></span>
+      </div>
+    </div>
+    <a class="title" target="_blank" href="/p/9492e39ca71d">从docker-ELKa谈一下docker化的思路</a>
+    <p class="abstract">
+      去年10月，我开始对两项技术充满着好奇，一个是ELK，另一个是docker。 ELK的核心是一个“分布式实时搜索引擎”，光听名字就会被吸引住，因为即便有专门的团队，要做一个这...
+    </p>
+    <div class="meta">
+      <a target="_blank" href="/p/9492e39ca71d">
+        <i class="iconfont ic-list-read"></i> 66
+</a>        <a target="_blank" href="/p/9492e39ca71d#comments">
+          <i class="iconfont ic-list-comments"></i> 0
+</a>      <span><i class="iconfont ic-list-like"></i> 3</span>
+    </div>
+  </div>
+</li>
+<li id="note-12642498" data-note-id="12642498" class="have-img">
+    <a class="wrap-img" href="/p/8c87992cae34" target="_blank">
+      <img data-echo="//upload-images.jianshu.io/upload_images/1818988-e37c45b85a905a21.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/375/h/300" class="img-blur" src="//upload-images.jianshu.io/upload_images/1818988-e37c45b85a905a21.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/150/h/120" alt="120" />
+    </a>
+  <div class="content">
+    <div class="author">
+      <a class="avatar" target="_blank" href="/u/10c02db77064">
+        <img src="//upload.jianshu.io/users/upload_avatars/1818988/ccf20a601293.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96" alt="96" />
+</a>      <div class="name">
+        <a class="blue-link" target="_blank" href="/u/10c02db77064">浮婴</a>
+        <span class="time" data-shared-at="2017-05-21T18:45:13+08:00"></span>
+      </div>
+    </div>
+    <a class="title" target="_blank" href="/p/8c87992cae34">搭建博客（三）编译安装PHP 5.6.30</a>
+    <p class="abstract">
+      一、下载安装包 PHP官方下载页面右键另复制链接。 终端切换到/usr/loca/src/目录下。 执行wget http://hk1.php.net/get/php-5.6...
+    </p>
+    <div class="meta">
+      <a target="_blank" href="/p/8c87992cae34">
+        <i class="iconfont ic-list-read"></i> 33
+</a>        <a target="_blank" href="/p/8c87992cae34#comments">
+          <i class="iconfont ic-list-comments"></i> 0
+</a>      <span><i class="iconfont ic-list-like"></i> 2</span>
+    </div>
+  </div>
+</li>
+<li id="note-12643216" data-note-id="12643216" class="">
+  <div class="content">
+    <div class="author">
+      <a class="avatar" target="_blank" href="/u/6182291ed968">
+        <img src="//upload.jianshu.io/users/upload_avatars/967869/5149ef10fec5.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96" alt="96" />
+</a>      <div class="name">
+        <a class="blue-link" target="_blank" href="/u/6182291ed968">Nemocdz</a>
+        <span class="time" data-shared-at="2017-05-21T19:15:15+08:00"></span>
+      </div>
+    </div>
+    <a class="title" target="_blank" href="/p/c5d0ed7f035c">iOS中实现一个支持小数的星星评分组件</a>
+    <p class="abstract">
+      在很多电商，外卖，餐饮型应用里，都会在商品结束后评价中有一个星星组件。核心思路就是用UIControl并自定义实现其中的trackTouch的几个方法。而显示不到一个的星星，...
+    </p>
+    <div class="meta">
+      <a target="_blank" href="/p/c5d0ed7f035c">
+        <i class="iconfont ic-list-read"></i> 814
+</a>        <a target="_blank" href="/p/c5d0ed7f035c#comments">
+          <i class="iconfont ic-list-comments"></i> 9
+</a>      <span><i class="iconfont ic-list-like"></i> 36</span>
+    </div>
+  </div>
+</li>
+<li id="note-12449646" data-note-id="12449646" class="have-img">
+    <a class="wrap-img" href="/p/b887af45d5de" target="_blank">
+      <img data-echo="//upload-images.jianshu.io/upload_images/3015321-7349d9744f9cde81.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/375/h/300" class="img-blur" src="//upload-images.jianshu.io/upload_images/3015321-7349d9744f9cde81.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/150/h/120" alt="120" />
+    </a>
+  <div class="content">
+    <div class="author">
+      <a class="avatar" target="_blank" href="/u/e0322044d014">
+        <img src="//upload.jianshu.io/users/upload_avatars/3015321/55aa20204a01.jpeg?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96" alt="96" />
+</a>      <div class="name">
+        <a class="blue-link" target="_blank" href="/u/e0322044d014">Abner_G</a>
+        <span class="time" data-shared-at="2017-05-21T19:55:35+08:00"></span>
+      </div>
+    </div>
+    <a class="title" target="_blank" href="/p/b887af45d5de">iOS开发-六大手势（tap、pan、swipe、longPress、rotation、pinch）</a>
+    <p class="abstract">
+      前言：相信大家在工作中对iOS手势的使用是非常之多的，今天闲来无事对常用的六大手势进行了简单的整理，在此系统的给大家简单介绍一下基本的使用。 1、UITapGestureRe...
+    </p>
+    <div class="meta">
+      <a target="_blank" href="/p/b887af45d5de">
+        <i class="iconfont ic-list-read"></i> 37
+</a>        <a target="_blank" href="/p/b887af45d5de#comments">
+          <i class="iconfont ic-list-comments"></i> 0
+</a>      <span><i class="iconfont ic-list-like"></i> 1</span>
+    </div>
+  </div>
+</li>
+
+</ul>
+
+      </div>
+    </div>
+    <div class="col-xs-24 col-sm-7 col-sm-offset-1 aside">
+        <p class="title">专题公告</p>
+        <div class="description js-description">
+          <p>如果你是程序员，或者有一颗喜欢写程序的心，喜欢分享技术干货、项目经验、程序员日常囧事等等，欢迎投稿《程序员》专题。</p>
+
+<p>专题主编：小彤花园 <a href="http://www.jianshu.com/users/4a4eb4feee62/">http://www.jianshu.com/users/4a4eb4feee62/</a>
+<br />编委：Kulbear</p>
+
+<p>【程序员】专题拒稿指北：<a href="http://www.jianshu.com/p/7c8b33b5f63b">http://www.jianshu.com/p/7c8b33b5f63b</a></p>
+
+<p>投稿须知：
+<br />1.收录相关技术文章，但不限于技术，也可以是项目经验类的文章和程序员日常。
+<br />2.文章內不得有任何推广信息。包括但不...</p>
+          <a data-action="toggle-description" class="open" href="javascript:void(null);">展开描述 <i class="iconfont ic-show"></i></a>
+        </div>
+      <div class="share">
+        <span>分享至</span>
+        <a href="javascript:void((function(s,d,e,r,l,p,t,z,c){var%20f=&#39;http://v.t.sina.com.cn/share/share.php?appkey=1881139527&#39;,u=z||d.location,p=[&#39;&amp;url=&#39;,e(u),&#39;&amp;title=&#39;,e(t||d.title),&#39;&amp;source=&#39;,e(r),&#39;&amp;sourceUrl=&#39;,e(l),&#39;&amp;content=&#39;,c||&#39;gb2312&#39;,&#39;&amp;pic=&#39;,e(p||&#39;&#39;)].join(&#39;&#39;);function%20a(){if(!window.open([f,p].join(&#39;&#39;),&#39;mb&#39;,[&#39;toolbar=0,status=0,resizable=1,width=440,height=430,left=&#39;,(s.width-440)/2,&#39;,top=&#39;,(s.height-430)/2].join(&#39;&#39;)))u.href=[f,p].join(&#39;&#39;);};if(/Firefox/.test(navigator.userAgent))setTimeout(a,0);else%20a();})(screen,document,encodeURIComponent,&#39;&#39;,&#39;&#39;,&#39;http://upload.jianshu.io/collections/images/16/computer_guy.jpg&#39;, &#39;推荐专题《程序员》（ 分享自 @简书 ）&#39;,&#39;http://www.jianshu.com/c/NEt52a?utm_campaign=maleskine&amp;utm_content=collection&amp;utm_medium=reader_share&amp;utm_source=weibo&#39;,&#39;页面编码gb2312|utf-8默认gb2312&#39;));"><i class="iconfont ic-share-weibo"></i></a>
+        <a data-action="weixin-share"><i class="iconfont ic-share-wechat"></i></a>
+        <a class="" href=""><i class="iconfont ic-share-more"></i></a>
+      </div>
+      <div class="editors-and-subscribers-container"></div>
+    </div>
+  </div>
+</div>
+<div data-vcomp="side-tool"></div>
+
+<script type="application/json" data-name="collection">
+  {"id":16,"slug":"NEt52a","owner":{"id":259},"content":"<p>如果你是程序员，或者有一颗喜欢写程序的心，喜欢分享技术干货、项目经验、程序员日常囧事等等，欢迎投稿《程序员》专题。</p>\n\n<p>专题主编：小彤花园 <a href=\"http://www.jianshu.com/users/4a4eb4feee62/\" class=\"blue-link\">http://www.jianshu.com/users/4a4eb4feee62/</a>\n<br />编委：Kulbear</p>\n\n<p>【程序员】专题拒稿指北：<a href=\"http://www.jianshu.com/p/7c8b33b5f63b\" class=\"blue-link\">http://www.jianshu.com/p/7c8b33b5f63b</a></p>\n\n<p>投稿须知：\n<br />1.收录相关技术文章，但不限于技术，也可以是项目经验类的文章和程序员日常。\n<br />2.文章內不得有任何推广信息。包括但不限于公众号、微博、微信，更不得在通过投稿后再修改文章加入推广信息。你可以将这些推广以及个人信息放在个人主页介绍里。\n<br />3.字数极少，段落混乱，大段代码没有放到代码框的文章不收录\n<br />4.不相关的内容不收录，请确认文章内容和本专题相关</p>\n\n<p>目前简书针对优质作者及爱好者，开设了官方程序员微信群，希望加入请发简信给主编小彤花园索取个人微信，主编会将你加入到【简书-程序员】微信群，分享内容，收获知识。添加微信时备注[简书ID]。</p>\n\n<p>微信添加简书大妈（jianshu_dama），进入简书丰富多彩的专题社群！</p>","short_content":"<p>如果你是程序员，或者有一颗喜欢写程序的心，喜欢分享技术干货、项目经验、程序员日常囧事等等，欢迎投稿《程序员》专题。</p>\n\n<p>专题主编：小彤花园 <a href=\"http://www.jianshu.com/users/4a4eb4feee62/\" class=\"blue-link\">http://www.jianshu.com/users/4a4eb4feee62/</a>\n<br />编委：Kulbear</p>\n\n<p>【程序员】专题拒稿指北：<a href=\"http://www.jianshu.com/p/7c8b33b5f63b\" class=\"blue-link\">http://www.jianshu.com/p/7c8b33b5f63b</a></p>\n\n<p>投稿须知：\n<br />1.收录相关技术文章，但不限于技术，也可以是项目经验类的文章和程序员日常。\n<br />2.文章內不得有任何推广信息。包括但不...</p>","subscribers_count":391281}
+</script>
+
+<script type='application/json' data-name='uuid'>
+  {"uuid":"9ccde5f4-316d-4bc6-804e-e9f6182437f1"}
+</script>
+
+    <script type="application/json" data-name="page-data">{"user_signed_in":false,"locale":"zh-CN","os":"other","read_mode":"day","read_font":"font2"}</script>
+    
+    <script src="//cdn2.jianshu.io/assets/babel-polyfill-2d33bdf1265b1805a404.js"></script>
+    <script src="//cdn2.jianshu.io/assets/web-base-2d33bdf1265b1805a404.js"></script>
+<script src="//cdn2.jianshu.io/assets/web-2d33bdf1265b1805a404.js"></script>
+    
+    <script src="//cdn2.jianshu.io/assets/web/pages/collections/show/entry-2d33bdf1265b1805a404.js"></script>
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-35169517-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+<script>
+  var _hmt = _hmt || [];
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "//hm.baidu.com/hm.js?0c0e9d9b1e7d617b3e6842e85b9fb068";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+  })();
+</script>
+
+<script>
+  (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      }
+      else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+  })();
+</script>
+
+  </body>
+</html>

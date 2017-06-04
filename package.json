@@ -1,25 +1,21 @@
 {
   "name": "jian-analyse",
   "version": "1.0.0",
-  "description": "通过爬取简书热门文章，分析怎样的文章才能上热门",
+  "description": "通过爬取简书程序员分类下代码的数量",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/zengwenfu/jian-analyse.git"
-  },
-  "author": "zengwenfu",
+  "author": "chen86860",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/zengwenfu/jian-analyse/issues"
-  },
-  "homepage": "https://github.com/zengwenfu/jian-analyse#readme",
   "devDependencies": {
     "browser-sync": "^2.17.0",
     "cheerio": "^0.22.0",
     "nunjucks": "^2.5.2"
+  },
+  "dependencies": {
+    "chokidar": "^1.7.0",
+    "nodemon": "^1.11.0"
   }
 }
